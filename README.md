@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://coda-bench.github.io/">
-    <img src="./assets/logo.png" style="height: 8em" alt="CoDA-Bench" />
+    <img src="./assets/logo.png" style="height: 30em" alt="CoDA-Bench" />
   </a>
 </p>
 
