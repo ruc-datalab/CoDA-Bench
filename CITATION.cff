@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "CoDA-Bench: Can Code Agents Handle Data-Intensive Tasks?"
+authors:
+  - family-names: Zhang
+    given-names: Yuxin
+  - family-names: Fan
+    given-names: Ju
+  - family-names: Fan
+    given-names: Meihao
+  - family-names: Zhang
+    given-names: Shaolei
+  - family-names: Du
+    given-names: Xiaoyong
+repository-code: "https://github.com/ruc-datalab/CoDA-Bench"
+url: "https://coda-bench.github.io/"
+license: MIT
+year: 2026

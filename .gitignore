@@ -1,0 +1,87 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.pyc
+
+# Virtual environments
+.venv*/
+venv/
+ENV/
+env/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+develop-eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Data files (large, not in git)
+data/data/
+datasets/communities/
+archives/
+*.tar.zst
+*.tar.gz
+*.zip
+
+# Results and logs
+results/
+experiments/
+output/
+logs/
+*.log
+predictions.jsonl
+evaluation_results/
+sandbox/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Ruff
+.ruff_cache/
+
+# Docker
+.dockerignore
+
+# Temporary
+tmp/
+temp/
+.cache/

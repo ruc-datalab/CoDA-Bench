@@ -1,0 +1,75 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "coda-bench"
+version = "0.1.0"
+description = "CoDA-Bench: Evaluation utilities for data-intensive code-agent benchmark"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Yuxin Zhang", email = "zhangshaolei98@ruc.edu.cn"},
+    {name = "Ju Fan"},
+    {name = "Meihao Fan"},
+    {name = "Shaolei Zhang"},
+    {name = "Xiaoyong Du"}
+]
+keywords = ["benchmark", "code-generation", "data-analysis", "agent-evaluation", "AI"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "pydantic>=2.0",
+    "typer>=0.12",
+    "rich>=13.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+    "mypy>=1.0"
+]
+
+[project.scripts]
+coda-bench-evaluate = "coda_bench.cli:evaluate_main"
+coda-bench-validate = "coda_bench.cli:validate_main"
+
+[project.urls]
+Homepage = "https://coda-bench.github.io/"
+Repository = "https://github.com/ruc-datalab/CoDA-Bench"
+Documentation = "https://github.com/ruc-datalab/CoDA-Bench/tree/main/docs"
+"Bug Tracker" = "https://github.com/ruc-datalab/CoDA-Bench/issues"
+Dataset = "https://huggingface.co/datasets/RUC-DataLab/CoDA-Bench"
+
+[tool.setuptools.packages.find]
+include = ["coda_bench*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
