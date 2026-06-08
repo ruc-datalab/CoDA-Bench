@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://coda-bench.github.io/">
-    <img src="./assets/logo.png" style="height: 30em" alt="CoDA-Bench" />
+    <img src="./assets/logo.png" style="height: 20em" alt="CoDA-Bench" />
   </a>
 </p>
 
@@ -32,7 +32,7 @@ Renmin University of China
 CoDA-Bench (Code and Data-intensive Benchmark) is a benchmark for evaluating AI agents on data-intensive analytical tasks.
 Given a *natural language question* and access to a *Linux sandbox* containing hundreds of data files, an agent must discover relevant data, write code, and produce the correct answer.
 
-<img src="./assets/overview.png">
+<img src="./assets/overview.png" style="height: 30em">
 
 Unlike existing benchmarks that provide oracle data directly, CoDA-Bench requires agents to:
 - 🔍 Discover relevant data among hundreds of semantically similar files
