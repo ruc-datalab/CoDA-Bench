@@ -4,28 +4,19 @@
   </a>
 </p>
 
-<p align="center">
-    <a href="https://www.python.org/">
-        <img alt="Build" src="https://img.shields.io/badge/Python-3.10+-1f425f.svg?color=purple">
-    </a>
-    <a href="https://github.com/ruc-datalab/CoDA-Bench/blob/main/LICENSE">
-        <img alt="License" src="https://img.shields.io/badge/License-MIT-blue">
-    </a>
-    <a href="https://badge.fury.io/py/coda-bench">
-        <img src="https://badge.fury.io/py/coda-bench.svg">
-    </a>
-    <a href="https://huggingface.co/datasets/RUC-DataLab/CoDA-Bench">
-        <img alt="Dataset" src="https://img.shields.io/badge/%F0%9F%93%9A%20HuggingFace%20-CoDA--Bench-orange.svg">
-    </a>
-</p>
+[![arXiv](https://img.shields.io/badge/arXiv-TBD-b31b1b.svg?logo=arXiv)](#)
+[![homepage](https://img.shields.io/badge/%F0%9F%8C%90%20Homepage%20-CoDA--Bench-blue.svg)](https://coda-bench.github.io/)
+[![data](https://img.shields.io/badge/%F0%9F%93%9A%20HuggingFace%20-CoDA--Bench-orange.svg)](https://huggingface.co/datasets/RUC-DataLab/CoDA-Bench)
+[![python](https://img.shields.io/badge/Python-3.10+-1f425f.svg?color=purple)](https://www.python.org/)
+[![license](https://img.shields.io/badge/License-MIT-blue)](https://github.com/ruc-datalab/CoDA-Bench/blob/main/LICENSE)
 
 ---
 
 Code and data for [ICML 2026] **CoDA-Bench: Can Code Agents Handle Data-Intensive Tasks?**
 
-Authors: [Yuxin Zhang](https://yuxinzhang-research.github.io/), [Ju Fan*](http://iir.ruc.edu.cn/~fanj/), [Meihao Fan](https://fmh1art.github.io/), [Shaolei Zhang](https://zhangshaolei1998.github.io/), [Xiaoyong Du](http://info.ruc.edu.cn/jsky/szdw/ajxjgcx/jsjkxyjsx1/js2/7374b0a3f58045fc9543703ccea2eb9c.htm)
-
-Renmin University of China
+> **Authors**: **[Yuxin Zhang](https://yuxinzhang-research.github.io/), [Ju Fan](http://iir.ruc.edu.cn/~fanj/), [Meihao Fan](https://fmh1art.github.io/), [Shaolei Zhang*](https://zhangshaolei1998.github.io/), [Xiaoyong Du](http://info.ruc.edu.cn/jsky/szdw/ajxjgcx/jsjkxyjsx1/js2/7374b0a3f58045fc9543703ccea2eb9c.htm)**
+>
+>Renmin University of China
 
 ## 👋 Overview
 
@@ -177,7 +168,6 @@ Current state-of-the-art results (as of paper publication):
 
 *EA = Execution Accuracy, DA = Discovery Accuracy*
 
-Submit your results to the [leaderboard](https://coda-bench.github.io/leaderboard)!
 
 ## 💡 Example Task
 
@@ -200,25 +190,10 @@ The agent needs to:
 ## 📚 Documentation
 
 - [Docker Evaluation Guide](docker/README.md) - Secure Docker-based evaluation
-- [Quick Start Guide](QUICKSTART.md) - Get started in 5 minutes
 - [Evaluation Protocol](docs/evaluation_protocol.md) - Scoring and metrics
 - [Data Format](docs/data_format.md) - Dataset schema
 - [Baseline Agents](docs/baseline_agents.md) - Reference implementations
 
-## 🛠 Development
-
-### Running Tests
-```bash
-pip install -e ".[dev]"
-pytest tests/
-```
-
-### Code Quality
-```bash
-ruff format .
-ruff check .
-mypy coda_bench/
-```
 
 ## 🗺️ Roadmap
 
