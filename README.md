@@ -23,7 +23,9 @@ Code and data for [ICML 2026] **CoDA-Bench: Can Code Agents Handle Data-Intensiv
 CoDA-Bench (Code and Data-intensive Benchmark) is a benchmark for evaluating AI agents on data-intensive analytical tasks.
 Given a *natural language question* and access to a *Linux sandbox* containing hundreds of data files, an agent must discover relevant data, write code, and produce the correct answer.
 
-<img src="./assets/overview.png" style="height: 30em">
+https://github.com/ruc-datalab/CoDA-Bench/raw/main/assets/demo_video.mp4
+
+> ▶️ Demo video. If it does not play inline, [download/watch it here](./assets/demo_video.mp4).
 
 Unlike existing benchmarks that provide oracle data directly, CoDA-Bench requires agents to:
 - 🔍 Discover relevant data among hundreds of semantically similar files
@@ -46,6 +48,8 @@ Unlike existing benchmarks that provide oracle data directly, CoDA-Bench require
 | **Total Size** | ~43 GB (compressed) |
 
 ## 🚀 Quick Start
+
+<img src="./assets/overview.png" style="height: 30em">
 
 ### Installation
 
