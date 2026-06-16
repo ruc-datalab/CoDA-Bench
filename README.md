@@ -208,7 +208,7 @@ The agent needs to:
 - ✅ Complete documentation
 
 **Coming Soon**
-- 🚧 **Direct mode** - Quick testing without Docker (simple, no isolation)
+- 🚧 **Direct mode** - Quick testing without Docker (simple,  no isolation)
 - 🚧 **Additional agents** - Claude Code, Codex, Mini-SWE-Agent Docker support
 - 🚧 **Better logging** - Real-time progress tracking
 - 🚧 **Performance optimizations** - Faster evaluation
