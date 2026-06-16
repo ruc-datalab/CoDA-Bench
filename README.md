@@ -4,7 +4,7 @@
   </a>
 </p>
 
-[![arXiv](https://img.shields.io/badge/arXiv-TBD-b31b1b.svg?logo=arXiv)](#)
+[![arXiv](https://img.shields.io/badge/arXiv-2606.15300-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2606.15300)
 [![homepage](https://img.shields.io/badge/%F0%9F%8C%90%20Homepage%20-CoDA--Bench-blue.svg)](https://coda-bench.github.io/)
 [![data](https://img.shields.io/badge/%F0%9F%93%9A%20HuggingFace%20-CoDA--Bench-orange.svg)](https://huggingface.co/datasets/RUC-DataLab/CoDA-Bench)
 [![python](https://img.shields.io/badge/Python-3.10+-1f425f.svg?color=purple)](https://www.python.org/)
@@ -23,9 +23,9 @@ Code and data for [ICML 2026] **CoDA-Bench: Can Code Agents Handle Data-Intensiv
 CoDA-Bench (Code and Data-intensive Benchmark) is a benchmark for evaluating AI agents on data-intensive analytical tasks.
 Given a *natural language question* and access to a *Linux sandbox* containing hundreds of data files, an agent must discover relevant data, write code, and produce the correct answer.
 
-https://github.com/user-attachments/assets/5a34d86f-d1d6-49f9-bddb-7e023d7e9347
+https://github.com/user-attachments/assets/34e50a62-744b-4079-8988-6a8bbfe166a0
 
-> ▶️ Demo video. If it does not play inline, [download/watch it here](./assets/demo_video_720p.mp4).
+> ▶️ Demo video. If it does not play inline, [download/watch it here](./assets/demo_video_compressed.mp4).
 
 Unlike existing benchmarks that provide oracle data directly, CoDA-Bench requires agents to:
 - 🔍 Discover relevant data among hundreds of semantically similar files
