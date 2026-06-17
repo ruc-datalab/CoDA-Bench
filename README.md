@@ -9,6 +9,7 @@
 [![data](https://img.shields.io/badge/%F0%9F%93%9A%20HuggingFace%20-CoDA--Bench-orange.svg)](https://huggingface.co/datasets/RUC-DataLab/CoDA-Bench)
 [![python](https://img.shields.io/badge/Python-3.10+-1f425f.svg?color=purple)](https://www.python.org/)
 [![license](https://img.shields.io/badge/License-MIT-blue)](https://github.com/ruc-datalab/CoDA-Bench/blob/main/LICENSE)
+[![wechat](https://img.shields.io/badge/WeChat-%E5%8A%A0%E5%85%A5CoDA--Bench%E4%BA%A4%E6%B5%81%E8%AE%A8%E8%AE%BA%E7%BE%A4-black?logo=wechat&logoColor=07C160)](./assets/WechatIMG.jpg)
 
 ---
 
@@ -247,6 +248,12 @@ Individual Kaggle datasets may have their own licenses.
 - GitHub Issues: [github.com/ruc-datalab/CoDA-Bench/issues](https://github.com/ruc-datalab/CoDA-Bench/issues)
 - Email: yuxin.zhang@ruc.edu.cn
 
----
+## 💬 WeChat Group
 
-**Built with data from the Kaggle community**
+Welcome to join the CoDA-Bench WeChat group, chat and share ideas with others!
+
+<p align="left" width="100%">
+<img src="./assets/WechatIMG.jpg" alt="CoDA-Bench WeChat" style="width: 35%; min-width: 300px; display: block; margin: auto;">
+</p>
+
+If you like CoDA-Bench, give it a GitHub Star ⭐.
