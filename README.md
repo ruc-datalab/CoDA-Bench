@@ -254,8 +254,8 @@ Individual Kaggle datasets may have their own licenses.
 Welcome to join the CoDA-Bench WeChat group or the RUC-DataLab Feishu group, chat and share ideas with others!
 
 <p align="left" width="100%">
-<img src="./assets/WechatIMG.jpg" alt="CoDA-Bench WeChat" style="width: 35%; height: 420px; min-width: 300px; object-fit: contain; display: block; margin: auto;">
-<img src="./assets/feishu.jpg" alt="RUC-DataLab Feishu group" style="width: 35%; height: 420px; min-width: 300px; object-fit: contain; display: block; margin: auto;">
+<img src="./assets/WechatIMG.jpg" alt="CoDA-Bench WeChat" width="360" height="420">
+<img src="./assets/feishu.jpg" alt="RUC-DataLab Feishu group" width="360" height="420">
 </p>
 
 If you like CoDA-Bench, give it a GitHub Star ⭐.
