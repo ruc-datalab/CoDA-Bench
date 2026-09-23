@@ -254,8 +254,8 @@ Individual Kaggle datasets may have their own licenses.
 Welcome to join the CoDA-Bench WeChat group or the Data+AI Enterprise WeChat group, chat and share ideas with others!
 
 <p align="left" width="100%">
-<img src="./assets/WechatIMG.jpg" alt="CoDA-Bench WeChat" width="360" height="420">
-<img src="./assets/wecom.jpg" alt="Data+AI Enterprise WeChat group" width="360" height="420">
+<img src="./assets/WechatIMG.jpg" alt="CoDA-Bench WeChat" width="360" height="508">
+<img src="./assets/wecom.jpg" alt="Data+AI Enterprise WeChat group" width="360" height="508">
 </p>
 
 If you like CoDA-Bench, give it a GitHub Star ⭐.
