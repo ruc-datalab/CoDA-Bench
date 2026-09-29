@@ -89,3 +89,18 @@ def test_download_refreshes_existing_json_and_fetches_missing_archive(tmp_path):
     assert (dest / 'communities/community_4/full_community/example/source/input.csv').is_file()
     assert record['version'] == '1.0.1'
     assert setup.sha256(dest / entry['archive_path']) == entry['sha256']
+
+
+def test_released_tasks_preserve_complete_source_identifiers():
+    from coda_bench.io import load_tasks
+
+    data_dir = Path(__file__).parents[1] / 'data'
+    sources = json.loads((data_dir / 'source_to_archive.json').read_text())['communities']
+    for filename in ('coda_bench.json', 'coda_bench_hard.json'):
+        for task in load_tasks(data_dir / filename):
+            key = f'{task.source_type}/{task.source_community}'
+            assert sources[key]['community_id'] == task.release_community
+            assert sources[key]['data_path'] == task.data_path
+    full = {task.instance_id: task for task in load_tasks(data_dir / 'coda_bench.json')}
+    assert full[39].release_community == full[44].release_community == 'community_4'
+    assert full[74].release_community == 'community_27'
