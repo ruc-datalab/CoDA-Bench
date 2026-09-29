@@ -1,0 +1,398 @@
+{
+  "version": "1.0.1",
+  "key_format": "source_type/source_community",
+  "communities": {
+    "da_expand_communities/community_0": {
+      "source_type": "da_expand_communities",
+      "source_community": "community_0",
+      "community_id": "community_0",
+      "data_path": "communities/community_0/full_community",
+      "archive_path": "archives/community_0.tar.zst",
+      "archive_root": "data/community_0"
+    },
+    "da_expand_communities/community_2": {
+      "source_type": "da_expand_communities",
+      "source_community": "community_2",
+      "community_id": "community_1",
+      "data_path": "communities/community_1/full_community",
+      "archive_path": "archives/community_1.tar.zst",
+      "archive_root": "data/community_1"
+    },
+    "da_expand_communities/community_4": {
+      "source_type": "da_expand_communities",
+      "source_community": "community_4",
+      "community_id": "community_2",
+      "data_path": "communities/community_2/full_community",
+      "archive_path": "archives/community_2.tar.zst",
+      "archive_root": "data/community_2"
+    },
+    "da_expand_communities/community_8": {
+      "source_type": "da_expand_communities",
+      "source_community": "community_8",
+      "community_id": "community_3",
+      "data_path": "communities/community_3/full_community",
+      "archive_path": "archives/community_3.tar.zst",
+      "archive_root": "data/community_3"
+    },
+    "da_expand_communities/community_15": {
+      "source_type": "da_expand_communities",
+      "source_community": "community_15",
+      "community_id": "community_4",
+      "data_path": "communities/community_4/full_community",
+      "archive_path": "archives/community_4.tar.zst",
+      "archive_root": "data/community_4"
+    },
+    "da_expand_communities/community_24": {
+      "source_type": "da_expand_communities",
+      "source_community": "community_24",
+      "community_id": "community_5",
+      "data_path": "communities/community_5/full_community",
+      "archive_path": "archives/community_5.tar.zst",
+      "archive_root": "data/community_5"
+    },
+    "da_expand_communities/community_25": {
+      "source_type": "da_expand_communities",
+      "source_community": "community_25",
+      "community_id": "community_6",
+      "data_path": "communities/community_6/full_community",
+      "archive_path": "archives/community_6.tar.zst",
+      "archive_root": "data/community_6"
+    },
+    "da_expand_communities/community_27": {
+      "source_type": "da_expand_communities",
+      "source_community": "community_27",
+      "community_id": "community_7",
+      "data_path": "communities/community_7/full_community",
+      "archive_path": "archives/community_7.tar.zst",
+      "archive_root": "data/community_7"
+    },
+    "da_expand_communities/community_33": {
+      "source_type": "da_expand_communities",
+      "source_community": "community_33",
+      "community_id": "community_8",
+      "data_path": "communities/community_8/full_community",
+      "archive_path": "archives/community_8.tar.zst",
+      "archive_root": "data/community_8"
+    },
+    "da_expand_communities/community_40": {
+      "source_type": "da_expand_communities",
+      "source_community": "community_40",
+      "community_id": "community_9",
+      "data_path": "communities/community_9/full_community",
+      "archive_path": "archives/community_9.tar.zst",
+      "archive_root": "data/community_9"
+    },
+    "da_expand_communities/community_43": {
+      "source_type": "da_expand_communities",
+      "source_community": "community_43",
+      "community_id": "community_10",
+      "data_path": "communities/community_10/full_community",
+      "archive_path": "archives/community_10.tar.zst",
+      "archive_root": "data/community_10"
+    },
+    "da_expand_communities/community_44": {
+      "source_type": "da_expand_communities",
+      "source_community": "community_44",
+      "community_id": "community_11",
+      "data_path": "communities/community_11/full_community",
+      "archive_path": "archives/community_11.tar.zst",
+      "archive_root": "data/community_11"
+    },
+    "da_expand_communities/community_49": {
+      "source_type": "da_expand_communities",
+      "source_community": "community_49",
+      "community_id": "community_12",
+      "data_path": "communities/community_12/full_community",
+      "archive_path": "archives/community_12.tar.zst",
+      "archive_root": "data/community_12"
+    },
+    "da_expand_communities/community_50": {
+      "source_type": "da_expand_communities",
+      "source_community": "community_50",
+      "community_id": "community_13",
+      "data_path": "communities/community_13/full_community",
+      "archive_path": "archives/community_13.tar.zst",
+      "archive_root": "data/community_13"
+    },
+    "da_expand_communities/community_60": {
+      "source_type": "da_expand_communities",
+      "source_community": "community_60",
+      "community_id": "community_14",
+      "data_path": "communities/community_14/full_community",
+      "archive_path": "archives/community_14.tar.zst",
+      "archive_root": "data/community_14"
+    },
+    "da_expand_communities/community_65": {
+      "source_type": "da_expand_communities",
+      "source_community": "community_65",
+      "community_id": "community_16",
+      "data_path": "communities/community_16/full_community",
+      "archive_path": "archives/community_16.tar.zst",
+      "archive_root": "data/community_16"
+    },
+    "da_expand_communities/community_73": {
+      "source_type": "da_expand_communities",
+      "source_community": "community_73",
+      "community_id": "community_17",
+      "data_path": "communities/community_17/full_community",
+      "archive_path": "archives/community_17.tar.zst",
+      "archive_root": "data/community_17"
+    },
+    "da_expand_communities/community_84": {
+      "source_type": "da_expand_communities",
+      "source_community": "community_84",
+      "community_id": "community_18",
+      "data_path": "communities/community_18/full_community",
+      "archive_path": "archives/community_18.tar.zst",
+      "archive_root": "data/community_18"
+    },
+    "da_expand_communities/community_103": {
+      "source_type": "da_expand_communities",
+      "source_community": "community_103",
+      "community_id": "community_20",
+      "data_path": "communities/community_20/full_community",
+      "archive_path": "archives/community_20.tar.zst",
+      "archive_root": "data/community_20"
+    },
+    "da_expand_communities/community_123": {
+      "source_type": "da_expand_communities",
+      "source_community": "community_123",
+      "community_id": "community_21",
+      "data_path": "communities/community_21/full_community",
+      "archive_path": "archives/community_21.tar.zst",
+      "archive_root": "data/community_21"
+    },
+    "da_expand_communities/community_154": {
+      "source_type": "da_expand_communities",
+      "source_community": "community_154",
+      "community_id": "community_23",
+      "data_path": "communities/community_23/full_community",
+      "archive_path": "archives/community_23.tar.zst",
+      "archive_root": "data/community_23"
+    },
+    "da_expand_communities/community_211": {
+      "source_type": "da_expand_communities",
+      "source_community": "community_211",
+      "community_id": "community_25",
+      "data_path": "communities/community_25/full_community",
+      "archive_path": "archives/community_25.tar.zst",
+      "archive_root": "data/community_25"
+    },
+    "da_filter_communities/community_0": {
+      "source_type": "da_filter_communities",
+      "source_community": "community_0",
+      "community_id": "community_26",
+      "data_path": "communities/community_26/full_community",
+      "archive_path": "archives/community_26.tar.zst",
+      "archive_root": "data/community_26"
+    },
+    "da_filter_communities/community_2": {
+      "source_type": "da_filter_communities",
+      "source_community": "community_2",
+      "community_id": "community_27",
+      "data_path": "communities/community_27/full_community",
+      "archive_path": "archives/community_27.tar.zst",
+      "archive_root": "data/community_27"
+    },
+    "da_filter_communities/community_4": {
+      "source_type": "da_filter_communities",
+      "source_community": "community_4",
+      "community_id": "community_28",
+      "data_path": "communities/community_28/full_community",
+      "archive_path": "archives/community_28.tar.zst",
+      "archive_root": "data/community_28"
+    },
+    "da_filter_communities/community_8": {
+      "source_type": "da_filter_communities",
+      "source_community": "community_8",
+      "community_id": "community_29",
+      "data_path": "communities/community_29/full_community",
+      "archive_path": "archives/community_29.tar.zst",
+      "archive_root": "data/community_29"
+    },
+    "da_filter_communities/community_15": {
+      "source_type": "da_filter_communities",
+      "source_community": "community_15",
+      "community_id": "community_30",
+      "data_path": "communities/community_30/full_community",
+      "archive_path": "archives/community_30.tar.zst",
+      "archive_root": "data/community_30"
+    },
+    "da_filter_communities/community_24": {
+      "source_type": "da_filter_communities",
+      "source_community": "community_24",
+      "community_id": "community_31",
+      "data_path": "communities/community_31/full_community",
+      "archive_path": "archives/community_31.tar.zst",
+      "archive_root": "data/community_31"
+    },
+    "da_filter_communities/community_25": {
+      "source_type": "da_filter_communities",
+      "source_community": "community_25",
+      "community_id": "community_32",
+      "data_path": "communities/community_32/full_community",
+      "archive_path": "archives/community_32.tar.zst",
+      "archive_root": "data/community_32"
+    },
+    "da_filter_communities/community_27": {
+      "source_type": "da_filter_communities",
+      "source_community": "community_27",
+      "community_id": "community_33",
+      "data_path": "communities/community_33/full_community",
+      "archive_path": "archives/community_33.tar.zst",
+      "archive_root": "data/community_33"
+    },
+    "da_filter_communities/community_33": {
+      "source_type": "da_filter_communities",
+      "source_community": "community_33",
+      "community_id": "community_34",
+      "data_path": "communities/community_34/full_community",
+      "archive_path": "archives/community_34.tar.zst",
+      "archive_root": "data/community_34"
+    },
+    "da_filter_communities/community_37": {
+      "source_type": "da_filter_communities",
+      "source_community": "community_37",
+      "community_id": "community_35",
+      "data_path": "communities/community_35/full_community",
+      "archive_path": "archives/community_35.tar.zst",
+      "archive_root": "data/community_35"
+    },
+    "da_filter_communities/community_40": {
+      "source_type": "da_filter_communities",
+      "source_community": "community_40",
+      "community_id": "community_36",
+      "data_path": "communities/community_36/full_community",
+      "archive_path": "archives/community_36.tar.zst",
+      "archive_root": "data/community_36"
+    },
+    "da_filter_communities/community_43": {
+      "source_type": "da_filter_communities",
+      "source_community": "community_43",
+      "community_id": "community_37",
+      "data_path": "communities/community_37/full_community",
+      "archive_path": "archives/community_37.tar.zst",
+      "archive_root": "data/community_37"
+    },
+    "da_filter_communities/community_44": {
+      "source_type": "da_filter_communities",
+      "source_community": "community_44",
+      "community_id": "community_38",
+      "data_path": "communities/community_38/full_community",
+      "archive_path": "archives/community_38.tar.zst",
+      "archive_root": "data/community_38"
+    },
+    "da_filter_communities/community_49": {
+      "source_type": "da_filter_communities",
+      "source_community": "community_49",
+      "community_id": "community_39",
+      "data_path": "communities/community_39/full_community",
+      "archive_path": "archives/community_39.tar.zst",
+      "archive_root": "data/community_39"
+    },
+    "da_filter_communities/community_50": {
+      "source_type": "da_filter_communities",
+      "source_community": "community_50",
+      "community_id": "community_40",
+      "data_path": "communities/community_40/full_community",
+      "archive_path": "archives/community_40.tar.zst",
+      "archive_root": "data/community_40"
+    },
+    "da_filter_communities/community_54": {
+      "source_type": "da_filter_communities",
+      "source_community": "community_54",
+      "community_id": "community_41",
+      "data_path": "communities/community_41/full_community",
+      "archive_path": "archives/community_41.tar.zst",
+      "archive_root": "data/community_41"
+    },
+    "da_filter_communities/community_60": {
+      "source_type": "da_filter_communities",
+      "source_community": "community_60",
+      "community_id": "community_42",
+      "data_path": "communities/community_42/full_community",
+      "archive_path": "archives/community_42.tar.zst",
+      "archive_root": "data/community_42"
+    },
+    "da_filter_communities/community_65": {
+      "source_type": "da_filter_communities",
+      "source_community": "community_65",
+      "community_id": "community_43",
+      "data_path": "communities/community_43/full_community",
+      "archive_path": "archives/community_43.tar.zst",
+      "archive_root": "data/community_43"
+    },
+    "da_filter_communities/community_90": {
+      "source_type": "da_filter_communities",
+      "source_community": "community_90",
+      "community_id": "community_44",
+      "data_path": "communities/community_44/full_community",
+      "archive_path": "archives/community_44.tar.zst",
+      "archive_root": "data/community_44"
+    },
+    "da_filter_communities/community_103": {
+      "source_type": "da_filter_communities",
+      "source_community": "community_103",
+      "community_id": "community_45",
+      "data_path": "communities/community_45/full_community",
+      "archive_path": "archives/community_45.tar.zst",
+      "archive_root": "data/community_45"
+    },
+    "da_filter_communities/community_129": {
+      "source_type": "da_filter_communities",
+      "source_community": "community_129",
+      "community_id": "community_46",
+      "data_path": "communities/community_46/full_community",
+      "archive_path": "archives/community_46.tar.zst",
+      "archive_root": "data/community_46"
+    },
+    "da_filter_communities/community_136": {
+      "source_type": "da_filter_communities",
+      "source_community": "community_136",
+      "community_id": "community_47",
+      "data_path": "communities/community_47/full_community",
+      "archive_path": "archives/community_47.tar.zst",
+      "archive_root": "data/community_47"
+    },
+    "da_filter_communities/community_153": {
+      "source_type": "da_filter_communities",
+      "source_community": "community_153",
+      "community_id": "community_48",
+      "data_path": "communities/community_48/full_community",
+      "archive_path": "archives/community_48.tar.zst",
+      "archive_root": "data/community_48"
+    },
+    "da_filter_communities/community_154": {
+      "source_type": "da_filter_communities",
+      "source_community": "community_154",
+      "community_id": "community_49",
+      "data_path": "communities/community_49/full_community",
+      "archive_path": "archives/community_49.tar.zst",
+      "archive_root": "data/community_49"
+    },
+    "da_filter_communities/community_175": {
+      "source_type": "da_filter_communities",
+      "source_community": "community_175",
+      "community_id": "community_50",
+      "data_path": "communities/community_50/full_community",
+      "archive_path": "archives/community_50.tar.zst",
+      "archive_root": "data/community_50"
+    },
+    "da_filter_communities/community_194": {
+      "source_type": "da_filter_communities",
+      "source_community": "community_194",
+      "community_id": "community_51",
+      "data_path": "communities/community_51/full_community",
+      "archive_path": "archives/community_51.tar.zst",
+      "archive_root": "data/community_51"
+    },
+    "da_filter_communities/community_200": {
+      "source_type": "da_filter_communities",
+      "source_community": "community_200",
+      "community_id": "community_52",
+      "data_path": "communities/community_52/full_community",
+      "archive_path": "archives/community_52.tar.zst",
+      "archive_root": "data/community_52"
+    }
+  }
+}

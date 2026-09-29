@@ -1,95 +1,32 @@
-"""Extract CoDA-Bench data archives.
-
-Usage:
-    python scripts/extract_archives.py --archives-dir ./archives --output-dir ./data
-"""
-from __future__ import annotations
-
+#!/usr/bin/env python3
+"""Verify and extract downloaded archives to datasets/communities."""
 import argparse
-import subprocess
-import sys
+import json
 from pathlib import Path
-
-
-def extract_archive(archive_path: Path, output_dir: Path) -> bool:
-    """Extract a single .tar.zst archive."""
-    print(f"Extracting {archive_path.name}...")
-    try:
-        subprocess.run(
-            ["tar", "--use-compress-program=zstd -d", "-xf", str(archive_path), "-C", str(output_dir)],
-            check=True,
-            capture_output=True,
-        )
-        print(f"✓ {archive_path.name} extracted successfully")
-        return True
-    except subprocess.CalledProcessError as e:
-        print(f"✗ Failed to extract {archive_path.name}: {e.stderr.decode()}", file=sys.stderr)
-        return False
-    except FileNotFoundError:
-        print("✗ Error: 'zstd' or 'tar' not found. Please install zstd:", file=sys.stderr)
-        print("  Ubuntu/Debian: sudo apt-get install zstd", file=sys.stderr)
-        print("  macOS: brew install zstd", file=sys.stderr)
-        return False
+from setup_dataset import extract_archive
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Extract CoDA-Bench data archives")
-    parser.add_argument(
-        "--archives-dir",
-        type=Path,
-        required=True,
-        help="Directory containing .tar.zst archives",
-    )
-    parser.add_argument(
-        "--output-dir",
-        type=Path,
-        required=True,
-        help="Output directory for extracted data",
-    )
-    parser.add_argument(
-        "--community",
-        type=str,
-        help="Extract only a specific community (e.g., 'community_26')",
-    )
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--archives-dir', type=Path, required=True)
+    parser.add_argument('--output-dir', type=Path, required=True,
+                        help='Community root, e.g. ./datasets/communities')
+    parser.add_argument('--manifest', type=Path)
+    parser.add_argument('--community', action='append')
+    parser.add_argument('--force', action='store_true')
     args = parser.parse_args()
-
-    archives_dir = args.archives_dir
-    output_dir = args.output_dir
-
-    if not archives_dir.exists():
-        print(f"✗ Error: Archives directory not found: {archives_dir}", file=sys.stderr)
-        sys.exit(1)
-
-    output_dir.mkdir(parents=True, exist_ok=True)
-
-    # Find all .tar.zst files
-    if args.community:
-        archives = list(archives_dir.glob(f"{args.community}.tar.zst"))
-        if not archives:
-            print(f"✗ Error: Archive not found: {args.community}.tar.zst", file=sys.stderr)
-            sys.exit(1)
-    else:
-        archives = sorted(archives_dir.glob("community_*.tar.zst"))
-
-    if not archives:
-        print(f"✗ Error: No .tar.zst archives found in {archives_dir}", file=sys.stderr)
-        sys.exit(1)
-
-    print(f"Found {len(archives)} archive(s) to extract")
-    print(f"Output directory: {output_dir}")
-    print()
-
-    success_count = 0
-    for archive in archives:
-        if extract_archive(archive, output_dir):
-            success_count += 1
-
-    print()
-    print(f"Extraction complete: {success_count}/{len(archives)} archives extracted successfully")
-
-    if success_count < len(archives):
-        sys.exit(1)
+    manifest = args.manifest or args.archives_dir.parent / 'archives_manifest.json'
+    entries = json.loads(manifest.read_text())['archives']
+    selected = set(args.community or [e['community_id'] for e in entries])
+    unknown = selected - {e['community_id'] for e in entries}
+    if unknown:
+        parser.error(f'Unknown communities: {sorted(unknown)}')
+    for entry in entries:
+        if entry['community_id'] in selected:
+            extract_archive(args.archives_dir / Path(entry['archive_path']).name,
+                            entry, args.output_dir, force=args.force)
+            print(f"Verified and extracted {entry['community_id']}")
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

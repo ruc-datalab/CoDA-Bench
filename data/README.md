@@ -37,10 +37,10 @@ Unlike existing benchmarks that provide oracle data directly, CoDA-Bench require
 
 ## 📊 Dataset Overview
 
-- **Full Benchmark**: 1,009 tasks across 31 communities (`coda_bench.json`)
-- **Hard Subset**: 119 challenging tasks across 15 communities (`coda_bench_hard.json`)
+- **Full Benchmark**: 1,009 tasks across 49 communities (`coda_bench.json`)
+- **Hard Subset**: 119 challenging tasks across 22 communities (`coda_bench_hard.json`)
 - **Source Data**: 199 Kaggle datasets from 267 notebooks
-- **Scale**: Average 980 files per environment (~43 GB total compressed)
+- **Scale**: Average 3413 files per environment (~66.45 GB total compressed)
 
 ## 🏆 Benchmark Results
 
@@ -66,3 +66,8 @@ Current state-of-the-art (as of paper publication):
 ```
 
 More information refer to [CoDA-Bench's Repo](https://github.com/ruc-datalab/CoDA-Bench)
+
+
+### Dataset correction: v1.0.1
+
+The community mapping and archive omissions reported in [issue #1](https://github.com/ruc-datalab/CoDA-Bench/issues/1) are corrected. Download the updated task JSON files and the required archives together. Full/hard splits use 49/22 communities. Previous evaluation scores refer to the original dataset revision; their applicability to this corrected release has not been established. See [release notes](release_notes.md) for validation scope and upgrade instructions.

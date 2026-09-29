@@ -30,7 +30,8 @@ classifiers = [
 dependencies = [
     "pydantic>=2.0",
     "typer>=0.12",
-    "rich>=13.0"
+    "rich>=13.0",
+    "huggingface_hub>=0.24"
 ]
 
 [project.optional-dependencies]

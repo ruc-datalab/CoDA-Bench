@@ -44,10 +44,10 @@ Unlike existing benchmarks that provide oracle data directly, CoDA-Bench require
 | Metric | Value |
 |--------|-------|
 | **Total Tasks** | 1,009 (full) / 119 (hard subset) |
-| **Communities** | 31 (full) / 15 (hard subset) |
+| **Communities** | 49 (full) / 22 (hard subset) |
 | **Source Datasets** | 199 Kaggle datasets |
-| **Avg Files per Task** | ~980 files |
-| **Total Size** | ~43 GB (compressed) |
+| **Avg Files per Task** | ~3413 files |
+| **Total Size** | ~66.45 GB (compressed) |
 
 ## 🚀 Quick Start
 
@@ -70,7 +70,7 @@ python scripts/setup_dataset.py --data-dir ./datasets
 
 This downloads:
 - Benchmark files (`coda_bench.json`, `coda_bench_hard.json`)
-- Community data archives (31 communities, ~43 GB)
+- Community data archives (49 communities, ~66.45 GB)
 - Automatically extracts all archives
 
 ### Run Evaluation (Docker Mode)
@@ -188,7 +188,7 @@ Current state-of-the-art results (as of paper publication):
 
 The agent needs to:
 1. Navigate to `datasets/communities/community_26/full_community/`
-2. Find `ckdisease/source/kidney_disease.csv` among ~980 files
+2. Find `ckdisease/source/kidney_disease.csv` among ~3413 files
 3. Load and analyze the data
 4. Calculate missing value percentage for RBC column
 5. Format answer as "38%"
@@ -259,3 +259,8 @@ Welcome to join the CoDA-Bench WeChat group or the Data+AI Enterprise WeChat gro
 </p>
 
 If you like CoDA-Bench, give it a GitHub Star ⭐.
+
+
+### Dataset correction: v1.0.1
+
+The community mapping and archive omissions reported in [issue #1](https://github.com/ruc-datalab/CoDA-Bench/issues/1) are corrected. Download the updated task JSON files and the required archives together. Full/hard splits use 49/22 communities. Previous evaluation scores refer to the original dataset revision; their applicability to this corrected release has not been established. See [release notes](data/release_notes.md) for validation scope and upgrade instructions.

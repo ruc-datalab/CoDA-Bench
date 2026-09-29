@@ -1,222 +1,183 @@
 #!/usr/bin/env python3
-"""
-CoDA-Bench Dataset Setup Script
-
-This script downloads the CoDA-Bench dataset from HuggingFace and extracts
-the community data archives to the correct locations.
-
-Usage:
-    python scripts/setup_dataset.py [--data-dir ./datasets]
-"""
-
+"""Download a pinned CoDA-Bench release, verify its archives, and extract them."""
 import argparse
+import hashlib
 import json
-import subprocess
-import sys
-from pathlib import Path
-import tarfile
+import os
+from pathlib import Path, PurePosixPath
 import shutil
+import subprocess
+import tarfile
+import tempfile
+import urllib.request
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_DATA_DIR = REPO_ROOT / "datasets"
-
-
-def log(msg: str):
-    print(f"[CoDA-Bench Setup] {msg}", flush=True)
-
-
-def check_dependencies():
-    """Check if required tools are installed."""
-    try:
-        subprocess.run(["huggingface-cli", "--version"],
-                      capture_output=True, check=True)
-    except (subprocess.CalledProcessError, FileNotFoundError):
-        log("ERROR: huggingface-cli not found. Please install it:")
-        log("  pip install huggingface-hub")
-        sys.exit(1)
-
-    try:
-        subprocess.run(["zstd", "--version"],
-                      capture_output=True, check=True)
-    except (subprocess.CalledProcessError, FileNotFoundError):
-        log("WARNING: zstd not found. Community archives use zstd compression.")
-        log("  Ubuntu/Debian: sudo apt-get install zstd")
-        log("  macOS: brew install zstd")
-        return False
-    return True
+REPO_ID = 'RUC-DataLab/CoDA-Bench'
+METADATA = ('coda_bench.json', 'coda_bench_hard.json', 'archives_manifest.json',
+            'source_to_archive.json', 'release_notes.md')
 
 
-def download_dataset(data_dir: Path, force: bool = False):
-    """Download dataset from HuggingFace."""
-    if data_dir.exists() and not force:
-        log(f"Data directory {data_dir} already exists. Use --force to re-download.")
-        benchmark_file = data_dir / "coda_bench.json"
-        if benchmark_file.exists():
-            log("✓ Benchmark data found")
+def sha256(path):
+    digest = hashlib.sha256()
+    with Path(path).open('rb') as stream:
+        for chunk in iter(lambda: stream.read(8 * 1024 * 1024), b''):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def verify_archive(path, entry):
+    path = Path(path)
+    if not path.is_file() or path.stat().st_size != entry['size_bytes']:
+        raise ValueError(f'Archive size mismatch: {path}')
+    if sha256(path) != entry['sha256']:
+        raise ValueError(f'Archive SHA-256 mismatch: {path}')
+
+
+def extract_archive(path, entry, communities_dir, force=False):
+    """Validate content and atomically replace one community after successful extraction."""
+    verify_archive(path, entry)
+    community = entry['community_id']
+    if not community.startswith('community_') or not community[10:].isdigit():
+        raise ValueError(f'Invalid community: {community}')
+    communities_dir = Path(communities_dir)
+    communities_dir.mkdir(parents=True, exist_ok=True)
+    target = communities_dir / community
+    marker = target / '.archive.sha256'
+    if not force and marker.is_file() and marker.read_text().strip() == entry['sha256']:
+        if (target / 'full_community').is_dir():
             return
-
-    log(f"Downloading CoDA-Bench dataset to {data_dir}...")
-    data_dir.mkdir(parents=True, exist_ok=True)
-
-    try:
-        result = subprocess.run([
-            "huggingface-cli", "download",
-            "RUC-DataLab/CoDA-Bench",
-            "--repo-type", "dataset",
-            "--local-dir", str(data_dir)
-        ], check=True, capture_output=True, text=True)
-        log("✓ Dataset downloaded successfully")
-    except subprocess.CalledProcessError as e:
-        log(f"ERROR: Failed to download dataset: {e.stderr}")
-        sys.exit(1)
-
-
-def extract_archives(data_dir: Path):
-    """Extract community data archives."""
-    archives_dir = data_dir / "archives"
-
-    if not archives_dir.exists():
-        log(f"WARNING: Archives directory not found at {archives_dir}")
-        return
-
-    archive_files = list(archives_dir.glob("community_*.tar.zst"))
-    if not archive_files:
-        log("WARNING: No community archives found")
-        return
-
-    log(f"Found {len(archive_files)} community archives to extract...")
-
-    communities_dir = data_dir / "communities"
-    communities_dir.mkdir(exist_ok=True)
-
-    for archive in sorted(archive_files):
-        community_name = archive.stem.replace(".tar", "")
-        output_dir = communities_dir / community_name
-
-        if output_dir.exists():
-            log(f"  ✓ {community_name} already extracted")
-            continue
-
-        log(f"  Extracting {community_name}...")
+    with tempfile.TemporaryDirectory(prefix='.extract-', dir=communities_dir) as tmp:
+        tmp = Path(tmp)
+        proc = subprocess.Popen(['zstd', '-dc', str(path)], stdout=subprocess.PIPE,
+                                stderr=subprocess.PIPE)
         try:
-            # Decompress with zstd, then extract tar
-            subprocess.run([
-                "zstd", "-d", str(archive), "-c"
-            ], stdout=subprocess.PIPE, check=True)
+            with tarfile.open(fileobj=proc.stdout, mode='r|') as archive:
+                for member in archive:
+                    name = member.name.removeprefix('./')
+                    parts = PurePosixPath(name).parts
+                    if name.startswith('/') or '..' in parts:
+                        raise ValueError(f'Unsafe archive path: {name}')
+                    if parts == ('data',) and member.isdir():
+                        continue
+                    if len(parts) < 2 or parts[:2] != ('data', community):
+                        raise ValueError(f'Unexpected archive root: {name}')
+                    dest = tmp.joinpath(*parts[1:])
+                    if member.isdir():
+                        dest.mkdir(parents=True, exist_ok=True)
+                    elif member.isfile():
+                        dest.parent.mkdir(parents=True, exist_ok=True)
+                        with archive.extractfile(member) as src, dest.open('wb') as dst:
+                            shutil.copyfileobj(src, dst, 1024 * 1024)
+                    else:
+                        raise ValueError(f'Unsupported archive entry: {name}')
+            error = proc.stderr.read().decode(errors='replace')
+            if proc.wait() != 0:
+                raise RuntimeError(f'zstd failed: {error}')
+        finally:
+            if proc.poll() is None:
+                proc.kill()
+            proc.wait()
+            proc.stdout.close()
+            proc.stderr.close()
+        staged = tmp / community
+        if not (staged / 'full_community').is_dir():
+            raise ValueError(f'Archive has no full_community directory: {community}')
+        (staged / '.archive.sha256').write_text(entry['sha256'] + '\n')
+        previous = tmp / 'previous'
+        if target.exists():
+            target.rename(previous)
+        try:
+            staged.rename(target)
+        except Exception:
+            if previous.exists():
+                previous.rename(target)
+            raise
 
-            # Use tar to extract
-            subprocess.run([
-                "tar", "-xf", str(archive).replace(".zst", ""),
-                "-C", str(communities_dir)
-            ], check=True)
 
-            log(f"  ✓ {community_name} extracted")
-        except subprocess.CalledProcessError as e:
-            log(f"  ERROR: Failed to extract {community_name}: {e}")
-            continue
+def install(data_dir, revision='main', communities=None, force=False, base_url=None):
+    """base_url is an optional HTTP mirror used for offline/release integration tests."""
+    data_dir = Path(data_dir)
+    data_dir.mkdir(parents=True, exist_ok=True)
+    if base_url:
+        if not base_url.startswith(('http://', 'https://')):
+            raise ValueError('base_url must be HTTP(S)')
+        resolved_revision = 'http-mirror'
 
-
-def verify_setup(data_dir: Path):
-    """Verify that the dataset is properly set up."""
-    log("\nVerifying setup...")
-
-    # Check benchmark files
-    benchmark_file = data_dir / "coda_bench.json"
-    hard_file = data_dir / "coda_bench_hard.json"
-
-    if not benchmark_file.exists():
-        log("  ✗ coda_bench.json not found")
-        return False
-
-    if not hard_file.exists():
-        log("  ✗ coda_bench_hard.json not found")
-        return False
-
-    # Load and check benchmark
-    try:
-        with open(benchmark_file) as f:
-            tasks = json.load(f)
-        log(f"  ✓ Loaded {len(tasks)} tasks from coda_bench.json")
-
-        with open(hard_file) as f:
-            hard_tasks = json.load(f)
-        log(f"  ✓ Loaded {len(hard_tasks)} tasks from coda_bench_hard.json")
-    except Exception as e:
-        log(f"  ✗ Error loading benchmark files: {e}")
-        return False
-
-    # Check communities
-    communities_dir = data_dir / "communities"
-    if communities_dir.exists():
-        num_communities = len(list(communities_dir.glob("community_*")))
-        log(f"  ✓ Found {num_communities} extracted communities")
+        def fetch(name, dest):
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            with urllib.request.urlopen(base_url.rstrip('/') + '/' + name, timeout=120) as src:
+                with dest.open('wb') as dst:
+                    shutil.copyfileobj(src, dst, 1024 * 1024)
     else:
-        log("  ✗ No communities directory found")
-        return False
+        try:
+            from huggingface_hub import HfApi, hf_hub_download
+        except ImportError as exc:
+            raise RuntimeError('Install huggingface_hub: pip install huggingface_hub') from exc
+        resolved_revision = HfApi().dataset_info(REPO_ID, revision=revision).sha
 
-    log("\n✓ Setup verification complete!")
-    return True
+        def fetch(name, dest):
+            cached = hf_hub_download(REPO_ID, name, repo_type='dataset',
+                                     revision=resolved_revision, force_download=force)
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(cached, dest)
+
+    # Always refresh metadata, even when an older task JSON already exists.
+    with tempfile.TemporaryDirectory(prefix='.download-', dir=data_dir) as tmp:
+        stage = Path(tmp)
+        for name in METADATA:
+            fetch(name, stage / name)
+        manifest = json.loads((stage / 'archives_manifest.json').read_text())
+        entries = {e['community_id']: e for e in manifest['archives']}
+        if len(entries) != len(manifest['archives']):
+            raise ValueError('Duplicate communities in archive manifest')
+        tasks = json.loads((stage / 'coda_bench.json').read_text())
+        hard = json.loads((stage / 'coda_bench_hard.json').read_text())
+        required = {r['release_community'] for r in tasks + hard}
+        if required - entries.keys():
+            raise ValueError(f'Manifest missing communities: {sorted(required - entries.keys())}')
+        selected = set(communities) if communities else required
+        if selected - entries.keys():
+            raise ValueError(f'Unknown communities: {sorted(selected - entries.keys())}')
+        for community in sorted(selected, key=lambda c: int(c.split('_')[1])):
+            entry = entries[community]
+            name = f'archives/{community}.tar.zst'
+            if entry['archive_path'] != name:
+                raise ValueError(f'Unexpected archive path: {entry["archive_path"]}')
+            archive = data_dir / name
+            valid = False
+            if archive.exists() and not force:
+                try:
+                    verify_archive(archive, entry)
+                    valid = True
+                except ValueError:
+                    pass
+            if not valid:
+                downloaded = stage / name
+                print(f'Downloading {community}', flush=True)
+                fetch(name, downloaded)
+                verify_archive(downloaded, entry)
+                archive.parent.mkdir(parents=True, exist_ok=True)
+                os.replace(downloaded, archive)
+            print(f'Verifying and extracting {community}', flush=True)
+            extract_archive(archive, entry, data_dir / 'communities', force=force)
+        for name in METADATA:
+            os.replace(stage / name, data_dir / name)
+        record = dict(revision=resolved_revision, version=manifest['version'],
+                      installed_communities=sorted(selected), partial=selected != required)
+        (data_dir / 'installed_release.json').write_text(json.dumps(record, indent=2) + '\n')
+    print(f'Installed {len(selected)} communities at revision {resolved_revision}', flush=True)
+    return record
 
 
 def main():
-    parser = argparse.ArgumentParser(
-        description="Download and setup CoDA-Bench dataset"
-    )
-    parser.add_argument(
-        "--data-dir",
-        type=Path,
-        default=DEFAULT_DATA_DIR,
-        help="Directory to store dataset (default: ./datasets)"
-    )
-    parser.add_argument(
-        "--force",
-        action="store_true",
-        help="Force re-download even if data exists"
-    )
-    parser.add_argument(
-        "--skip-extract",
-        action="store_true",
-        help="Skip extracting community archives"
-    )
-    parser.add_argument(
-        "--skip-verify",
-        action="store_true",
-        help="Skip verification step"
-    )
-
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--data-dir', type=Path, default=Path(__file__).resolve().parents[1] / 'datasets')
+    parser.add_argument('--revision', default='main', help='HF branch, tag, or immutable commit SHA')
+    parser.add_argument('--community', action='append', help='Install one community; repeat as needed')
+    parser.add_argument('--force', action='store_true')
+    parser.add_argument('--base-url', help='Optional HTTP mirror, primarily for release testing')
     args = parser.parse_args()
-
-    log("="*60)
-    log("CoDA-Bench Dataset Setup")
-    log("="*60)
-
-    # Check dependencies
-    has_zstd = check_dependencies()
-
-    # Download dataset
-    download_dataset(args.data_dir, args.force)
-
-    # Extract archives
-    if not args.skip_extract:
-        if has_zstd:
-            extract_archives(args.data_dir)
-        else:
-            log("\nSkipping archive extraction (zstd not available)")
-            log("Install zstd to extract community data")
-
-    # Verify setup
-    if not args.skip_verify:
-        if not verify_setup(args.data_dir):
-            log("\nSetup incomplete. Please check errors above.")
-            sys.exit(1)
-
-    log("\n" + "="*60)
-    log("Setup complete! You can now run evaluations.")
-    log("="*60)
-    log(f"\nDataset location: {args.data_dir.resolve()}")
-    log(f"Benchmark file: {args.data_dir / 'coda_bench.json'}")
-    log(f"Communities: {args.data_dir / 'communities'}/")
+    install(args.data_dir, args.revision, args.community, args.force, args.base_url)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

@@ -1,0 +1,15 @@
+{
+  "version": "1.0.1",
+  "full_tasks": 1009,
+  "hard_tasks": 119,
+  "full_communities": 49,
+  "hard_communities": 22,
+  "primary_datasets": 199,
+  "notebooks": 267,
+  "mean_files_per_task": 3413.236868186323,
+  "compressed_bytes": 66448309987,
+  "changed_community_full": 186,
+  "changed_reference_code_full": 102,
+  "checked_dependency_tasks": 187,
+  "dataset_notebook_pairs": 271
+}

@@ -1,3 +1,7 @@
+# Dataset correction v1.0.1 (2026-09-29)
+
+See [release notes](data/release_notes.md) for corrected mappings, missing archives, validation, and upgrade instructions.
+
 # Changelog
 
 All notable changes to CoDA-Bench will be documented in this file.
