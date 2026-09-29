@@ -26,6 +26,12 @@ jobs:
         python -m pip install --upgrade pip
         pip install -e ".[dev]"
 
+    - name: Test dataset download and extraction
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y zstd
+        python -m pytest -q tests/test_dataset_setup.py
+
     - name: Test installation
       run: |
         python scripts/test_installation.py

@@ -1,5 +1,4 @@
 import functools
-import hashlib
 import http.server
 import importlib.util
 import io
