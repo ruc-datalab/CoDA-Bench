@@ -15,6 +15,8 @@ class Task(BaseModel):
     notebook: str
     release_community: str
     data_path: str
+    source_type: Optional[str] = None
+    source_community: Optional[str] = None
 
 
 class Prediction(BaseModel):

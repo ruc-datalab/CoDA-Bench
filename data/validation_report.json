@@ -1,0 +1,1369 @@
+{
+  "version": "1.0.1",
+  "archive_checksums_verified": 49,
+  "remapped_full_tasks": 186,
+  "remapped_hard_tasks": 16,
+  "reference_path_corrected_full_tasks": 102,
+  "dependency_audit_tasks": 187,
+  "unresolved_source_paths": [],
+  "known_reference_limitations": {
+    "unresolved_other_paths_full_ids": [
+      111,
+      136
+    ],
+    "external_download_full_ids": [
+      5,
+      29
+    ],
+    "embedded_or_fallback_data_full_ids": [
+      0,
+      2,
+      5,
+      6,
+      7,
+      10,
+      11,
+      13,
+      17,
+      27,
+      30,
+      111,
+      136
+    ]
+  },
+  "executed_full_ids": [
+    39,
+    44,
+    74,
+    92,
+    93
+  ],
+  "clean_http_download_and_extraction_test": [
+    {
+      "hard_id": 0,
+      "stdout": "Chevella; Chelvella; 94",
+      "expected": "Chevella; Chelvella; 94",
+      "passed": true
+    },
+    {
+      "hard_id": 1,
+      "stdout": "8539; 635; September (9) to December (12)",
+      "expected": "8539; 635; September (9) to December (12)",
+      "passed": true
+    }
+  ],
+  "task74_override": {
+    "instance_id": 74,
+    "decision": "retain_published_community_27",
+    "reason": "Required brazilianstates CSV files absent from original community_1 and present in published community_27",
+    "expected": "0.39",
+    "stdout": "0.39",
+    "exit_code": 0,
+    "stderr": "",
+    "hard_ids": []
+  },
+  "task_mapping_changes": [
+    {
+      "instance_id": 0,
+      "previous_community": "community_26",
+      "release_community": "community_0",
+      "source_type": "da_expand_communities",
+      "source_community": "community_0"
+    },
+    {
+      "instance_id": 1,
+      "previous_community": "community_26",
+      "release_community": "community_0",
+      "source_type": "da_expand_communities",
+      "source_community": "community_0"
+    },
+    {
+      "instance_id": 2,
+      "previous_community": "community_26",
+      "release_community": "community_0",
+      "source_type": "da_expand_communities",
+      "source_community": "community_0"
+    },
+    {
+      "instance_id": 3,
+      "previous_community": "community_26",
+      "release_community": "community_0",
+      "source_type": "da_expand_communities",
+      "source_community": "community_0"
+    },
+    {
+      "instance_id": 4,
+      "previous_community": "community_26",
+      "release_community": "community_0",
+      "source_type": "da_expand_communities",
+      "source_community": "community_0"
+    },
+    {
+      "instance_id": 5,
+      "previous_community": "community_26",
+      "release_community": "community_0",
+      "source_type": "da_expand_communities",
+      "source_community": "community_0"
+    },
+    {
+      "instance_id": 6,
+      "previous_community": "community_26",
+      "release_community": "community_0",
+      "source_type": "da_expand_communities",
+      "source_community": "community_0"
+    },
+    {
+      "instance_id": 7,
+      "previous_community": "community_26",
+      "release_community": "community_0",
+      "source_type": "da_expand_communities",
+      "source_community": "community_0"
+    },
+    {
+      "instance_id": 8,
+      "previous_community": "community_26",
+      "release_community": "community_0",
+      "source_type": "da_expand_communities",
+      "source_community": "community_0"
+    },
+    {
+      "instance_id": 9,
+      "previous_community": "community_26",
+      "release_community": "community_0",
+      "source_type": "da_expand_communities",
+      "source_community": "community_0"
+    },
+    {
+      "instance_id": 10,
+      "previous_community": "community_26",
+      "release_community": "community_0",
+      "source_type": "da_expand_communities",
+      "source_community": "community_0"
+    },
+    {
+      "instance_id": 11,
+      "previous_community": "community_26",
+      "release_community": "community_0",
+      "source_type": "da_expand_communities",
+      "source_community": "community_0"
+    },
+    {
+      "instance_id": 12,
+      "previous_community": "community_26",
+      "release_community": "community_0",
+      "source_type": "da_expand_communities",
+      "source_community": "community_0"
+    },
+    {
+      "instance_id": 13,
+      "previous_community": "community_26",
+      "release_community": "community_0",
+      "source_type": "da_expand_communities",
+      "source_community": "community_0"
+    },
+    {
+      "instance_id": 14,
+      "previous_community": "community_26",
+      "release_community": "community_0",
+      "source_type": "da_expand_communities",
+      "source_community": "community_0"
+    },
+    {
+      "instance_id": 15,
+      "previous_community": "community_26",
+      "release_community": "community_0",
+      "source_type": "da_expand_communities",
+      "source_community": "community_0"
+    },
+    {
+      "instance_id": 16,
+      "previous_community": "community_26",
+      "release_community": "community_0",
+      "source_type": "da_expand_communities",
+      "source_community": "community_0"
+    },
+    {
+      "instance_id": 17,
+      "previous_community": "community_26",
+      "release_community": "community_0",
+      "source_type": "da_expand_communities",
+      "source_community": "community_0"
+    },
+    {
+      "instance_id": 18,
+      "previous_community": "community_26",
+      "release_community": "community_0",
+      "source_type": "da_expand_communities",
+      "source_community": "community_0"
+    },
+    {
+      "instance_id": 19,
+      "previous_community": "community_26",
+      "release_community": "community_0",
+      "source_type": "da_expand_communities",
+      "source_community": "community_0"
+    },
+    {
+      "instance_id": 20,
+      "previous_community": "community_26",
+      "release_community": "community_0",
+      "source_type": "da_expand_communities",
+      "source_community": "community_0"
+    },
+    {
+      "instance_id": 21,
+      "previous_community": "community_26",
+      "release_community": "community_0",
+      "source_type": "da_expand_communities",
+      "source_community": "community_0"
+    },
+    {
+      "instance_id": 22,
+      "previous_community": "community_26",
+      "release_community": "community_0",
+      "source_type": "da_expand_communities",
+      "source_community": "community_0"
+    },
+    {
+      "instance_id": 23,
+      "previous_community": "community_26",
+      "release_community": "community_0",
+      "source_type": "da_expand_communities",
+      "source_community": "community_0"
+    },
+    {
+      "instance_id": 24,
+      "previous_community": "community_26",
+      "release_community": "community_0",
+      "source_type": "da_expand_communities",
+      "source_community": "community_0"
+    },
+    {
+      "instance_id": 25,
+      "previous_community": "community_26",
+      "release_community": "community_0",
+      "source_type": "da_expand_communities",
+      "source_community": "community_0"
+    },
+    {
+      "instance_id": 26,
+      "previous_community": "community_26",
+      "release_community": "community_0",
+      "source_type": "da_expand_communities",
+      "source_community": "community_0"
+    },
+    {
+      "instance_id": 27,
+      "previous_community": "community_26",
+      "release_community": "community_0",
+      "source_type": "da_expand_communities",
+      "source_community": "community_0"
+    },
+    {
+      "instance_id": 28,
+      "previous_community": "community_26",
+      "release_community": "community_0",
+      "source_type": "da_expand_communities",
+      "source_community": "community_0"
+    },
+    {
+      "instance_id": 29,
+      "previous_community": "community_26",
+      "release_community": "community_0",
+      "source_type": "da_expand_communities",
+      "source_community": "community_0"
+    },
+    {
+      "instance_id": 30,
+      "previous_community": "community_26",
+      "release_community": "community_0",
+      "source_type": "da_expand_communities",
+      "source_community": "community_0"
+    },
+    {
+      "instance_id": 31,
+      "previous_community": "community_45",
+      "release_community": "community_20",
+      "source_type": "da_expand_communities",
+      "source_community": "community_103"
+    },
+    {
+      "instance_id": 32,
+      "previous_community": "community_45",
+      "release_community": "community_20",
+      "source_type": "da_expand_communities",
+      "source_community": "community_103"
+    },
+    {
+      "instance_id": 34,
+      "previous_community": "community_30",
+      "release_community": "community_4",
+      "source_type": "da_expand_communities",
+      "source_community": "community_15"
+    },
+    {
+      "instance_id": 35,
+      "previous_community": "community_30",
+      "release_community": "community_4",
+      "source_type": "da_expand_communities",
+      "source_community": "community_15"
+    },
+    {
+      "instance_id": 36,
+      "previous_community": "community_30",
+      "release_community": "community_4",
+      "source_type": "da_expand_communities",
+      "source_community": "community_15"
+    },
+    {
+      "instance_id": 37,
+      "previous_community": "community_30",
+      "release_community": "community_4",
+      "source_type": "da_expand_communities",
+      "source_community": "community_15"
+    },
+    {
+      "instance_id": 38,
+      "previous_community": "community_30",
+      "release_community": "community_4",
+      "source_type": "da_expand_communities",
+      "source_community": "community_15"
+    },
+    {
+      "instance_id": 39,
+      "previous_community": "community_30",
+      "release_community": "community_4",
+      "source_type": "da_expand_communities",
+      "source_community": "community_15"
+    },
+    {
+      "instance_id": 40,
+      "previous_community": "community_30",
+      "release_community": "community_4",
+      "source_type": "da_expand_communities",
+      "source_community": "community_15"
+    },
+    {
+      "instance_id": 41,
+      "previous_community": "community_30",
+      "release_community": "community_4",
+      "source_type": "da_expand_communities",
+      "source_community": "community_15"
+    },
+    {
+      "instance_id": 42,
+      "previous_community": "community_30",
+      "release_community": "community_4",
+      "source_type": "da_expand_communities",
+      "source_community": "community_15"
+    },
+    {
+      "instance_id": 43,
+      "previous_community": "community_30",
+      "release_community": "community_4",
+      "source_type": "da_expand_communities",
+      "source_community": "community_15"
+    },
+    {
+      "instance_id": 44,
+      "previous_community": "community_30",
+      "release_community": "community_4",
+      "source_type": "da_expand_communities",
+      "source_community": "community_15"
+    },
+    {
+      "instance_id": 45,
+      "previous_community": "community_30",
+      "release_community": "community_4",
+      "source_type": "da_expand_communities",
+      "source_community": "community_15"
+    },
+    {
+      "instance_id": 46,
+      "previous_community": "community_30",
+      "release_community": "community_4",
+      "source_type": "da_expand_communities",
+      "source_community": "community_15"
+    },
+    {
+      "instance_id": 47,
+      "previous_community": "community_30",
+      "release_community": "community_4",
+      "source_type": "da_expand_communities",
+      "source_community": "community_15"
+    },
+    {
+      "instance_id": 48,
+      "previous_community": "community_30",
+      "release_community": "community_4",
+      "source_type": "da_expand_communities",
+      "source_community": "community_15"
+    },
+    {
+      "instance_id": 49,
+      "previous_community": "community_30",
+      "release_community": "community_4",
+      "source_type": "da_expand_communities",
+      "source_community": "community_15"
+    },
+    {
+      "instance_id": 50,
+      "previous_community": "community_30",
+      "release_community": "community_4",
+      "source_type": "da_expand_communities",
+      "source_community": "community_15"
+    },
+    {
+      "instance_id": 51,
+      "previous_community": "community_30",
+      "release_community": "community_4",
+      "source_type": "da_expand_communities",
+      "source_community": "community_15"
+    },
+    {
+      "instance_id": 52,
+      "previous_community": "community_30",
+      "release_community": "community_4",
+      "source_type": "da_expand_communities",
+      "source_community": "community_15"
+    },
+    {
+      "instance_id": 53,
+      "previous_community": "community_30",
+      "release_community": "community_4",
+      "source_type": "da_expand_communities",
+      "source_community": "community_15"
+    },
+    {
+      "instance_id": 54,
+      "previous_community": "community_49",
+      "release_community": "community_23",
+      "source_type": "da_expand_communities",
+      "source_community": "community_154"
+    },
+    {
+      "instance_id": 55,
+      "previous_community": "community_49",
+      "release_community": "community_23",
+      "source_type": "da_expand_communities",
+      "source_community": "community_154"
+    },
+    {
+      "instance_id": 56,
+      "previous_community": "community_49",
+      "release_community": "community_23",
+      "source_type": "da_expand_communities",
+      "source_community": "community_154"
+    },
+    {
+      "instance_id": 57,
+      "previous_community": "community_27",
+      "release_community": "community_1",
+      "source_type": "da_expand_communities",
+      "source_community": "community_2"
+    },
+    {
+      "instance_id": 58,
+      "previous_community": "community_27",
+      "release_community": "community_1",
+      "source_type": "da_expand_communities",
+      "source_community": "community_2"
+    },
+    {
+      "instance_id": 59,
+      "previous_community": "community_27",
+      "release_community": "community_1",
+      "source_type": "da_expand_communities",
+      "source_community": "community_2"
+    },
+    {
+      "instance_id": 60,
+      "previous_community": "community_27",
+      "release_community": "community_1",
+      "source_type": "da_expand_communities",
+      "source_community": "community_2"
+    },
+    {
+      "instance_id": 61,
+      "previous_community": "community_27",
+      "release_community": "community_1",
+      "source_type": "da_expand_communities",
+      "source_community": "community_2"
+    },
+    {
+      "instance_id": 62,
+      "previous_community": "community_27",
+      "release_community": "community_1",
+      "source_type": "da_expand_communities",
+      "source_community": "community_2"
+    },
+    {
+      "instance_id": 63,
+      "previous_community": "community_27",
+      "release_community": "community_1",
+      "source_type": "da_expand_communities",
+      "source_community": "community_2"
+    },
+    {
+      "instance_id": 64,
+      "previous_community": "community_27",
+      "release_community": "community_1",
+      "source_type": "da_expand_communities",
+      "source_community": "community_2"
+    },
+    {
+      "instance_id": 65,
+      "previous_community": "community_27",
+      "release_community": "community_1",
+      "source_type": "da_expand_communities",
+      "source_community": "community_2"
+    },
+    {
+      "instance_id": 66,
+      "previous_community": "community_27",
+      "release_community": "community_1",
+      "source_type": "da_expand_communities",
+      "source_community": "community_2"
+    },
+    {
+      "instance_id": 67,
+      "previous_community": "community_27",
+      "release_community": "community_1",
+      "source_type": "da_expand_communities",
+      "source_community": "community_2"
+    },
+    {
+      "instance_id": 68,
+      "previous_community": "community_27",
+      "release_community": "community_1",
+      "source_type": "da_expand_communities",
+      "source_community": "community_2"
+    },
+    {
+      "instance_id": 69,
+      "previous_community": "community_27",
+      "release_community": "community_1",
+      "source_type": "da_expand_communities",
+      "source_community": "community_2"
+    },
+    {
+      "instance_id": 70,
+      "previous_community": "community_27",
+      "release_community": "community_1",
+      "source_type": "da_expand_communities",
+      "source_community": "community_2"
+    },
+    {
+      "instance_id": 71,
+      "previous_community": "community_27",
+      "release_community": "community_1",
+      "source_type": "da_expand_communities",
+      "source_community": "community_2"
+    },
+    {
+      "instance_id": 72,
+      "previous_community": "community_27",
+      "release_community": "community_1",
+      "source_type": "da_expand_communities",
+      "source_community": "community_2"
+    },
+    {
+      "instance_id": 73,
+      "previous_community": "community_27",
+      "release_community": "community_1",
+      "source_type": "da_expand_communities",
+      "source_community": "community_2"
+    },
+    {
+      "instance_id": 75,
+      "previous_community": "community_27",
+      "release_community": "community_1",
+      "source_type": "da_expand_communities",
+      "source_community": "community_2"
+    },
+    {
+      "instance_id": 76,
+      "previous_community": "community_27",
+      "release_community": "community_1",
+      "source_type": "da_expand_communities",
+      "source_community": "community_2"
+    },
+    {
+      "instance_id": 77,
+      "previous_community": "community_27",
+      "release_community": "community_1",
+      "source_type": "da_expand_communities",
+      "source_community": "community_2"
+    },
+    {
+      "instance_id": 78,
+      "previous_community": "community_27",
+      "release_community": "community_1",
+      "source_type": "da_expand_communities",
+      "source_community": "community_2"
+    },
+    {
+      "instance_id": 79,
+      "previous_community": "community_27",
+      "release_community": "community_1",
+      "source_type": "da_expand_communities",
+      "source_community": "community_2"
+    },
+    {
+      "instance_id": 80,
+      "previous_community": "community_27",
+      "release_community": "community_1",
+      "source_type": "da_expand_communities",
+      "source_community": "community_2"
+    },
+    {
+      "instance_id": 81,
+      "previous_community": "community_27",
+      "release_community": "community_1",
+      "source_type": "da_expand_communities",
+      "source_community": "community_2"
+    },
+    {
+      "instance_id": 82,
+      "previous_community": "community_27",
+      "release_community": "community_1",
+      "source_type": "da_expand_communities",
+      "source_community": "community_2"
+    },
+    {
+      "instance_id": 83,
+      "previous_community": "community_27",
+      "release_community": "community_1",
+      "source_type": "da_expand_communities",
+      "source_community": "community_2"
+    },
+    {
+      "instance_id": 84,
+      "previous_community": "community_27",
+      "release_community": "community_1",
+      "source_type": "da_expand_communities",
+      "source_community": "community_2"
+    },
+    {
+      "instance_id": 85,
+      "previous_community": "community_27",
+      "release_community": "community_1",
+      "source_type": "da_expand_communities",
+      "source_community": "community_2"
+    },
+    {
+      "instance_id": 87,
+      "previous_community": "community_31",
+      "release_community": "community_5",
+      "source_type": "da_expand_communities",
+      "source_community": "community_24"
+    },
+    {
+      "instance_id": 88,
+      "previous_community": "community_31",
+      "release_community": "community_5",
+      "source_type": "da_expand_communities",
+      "source_community": "community_24"
+    },
+    {
+      "instance_id": 89,
+      "previous_community": "community_31",
+      "release_community": "community_5",
+      "source_type": "da_expand_communities",
+      "source_community": "community_24"
+    },
+    {
+      "instance_id": 90,
+      "previous_community": "community_31",
+      "release_community": "community_5",
+      "source_type": "da_expand_communities",
+      "source_community": "community_24"
+    },
+    {
+      "instance_id": 91,
+      "previous_community": "community_31",
+      "release_community": "community_5",
+      "source_type": "da_expand_communities",
+      "source_community": "community_24"
+    },
+    {
+      "instance_id": 92,
+      "previous_community": "community_31",
+      "release_community": "community_5",
+      "source_type": "da_expand_communities",
+      "source_community": "community_24"
+    },
+    {
+      "instance_id": 93,
+      "previous_community": "community_31",
+      "release_community": "community_5",
+      "source_type": "da_expand_communities",
+      "source_community": "community_24"
+    },
+    {
+      "instance_id": 94,
+      "previous_community": "community_31",
+      "release_community": "community_5",
+      "source_type": "da_expand_communities",
+      "source_community": "community_24"
+    },
+    {
+      "instance_id": 95,
+      "previous_community": "community_31",
+      "release_community": "community_5",
+      "source_type": "da_expand_communities",
+      "source_community": "community_24"
+    },
+    {
+      "instance_id": 96,
+      "previous_community": "community_31",
+      "release_community": "community_5",
+      "source_type": "da_expand_communities",
+      "source_community": "community_24"
+    },
+    {
+      "instance_id": 97,
+      "previous_community": "community_31",
+      "release_community": "community_5",
+      "source_type": "da_expand_communities",
+      "source_community": "community_24"
+    },
+    {
+      "instance_id": 98,
+      "previous_community": "community_31",
+      "release_community": "community_5",
+      "source_type": "da_expand_communities",
+      "source_community": "community_24"
+    },
+    {
+      "instance_id": 99,
+      "previous_community": "community_31",
+      "release_community": "community_5",
+      "source_type": "da_expand_communities",
+      "source_community": "community_24"
+    },
+    {
+      "instance_id": 100,
+      "previous_community": "community_31",
+      "release_community": "community_5",
+      "source_type": "da_expand_communities",
+      "source_community": "community_24"
+    },
+    {
+      "instance_id": 101,
+      "previous_community": "community_31",
+      "release_community": "community_5",
+      "source_type": "da_expand_communities",
+      "source_community": "community_24"
+    },
+    {
+      "instance_id": 102,
+      "previous_community": "community_32",
+      "release_community": "community_6",
+      "source_type": "da_expand_communities",
+      "source_community": "community_25"
+    },
+    {
+      "instance_id": 103,
+      "previous_community": "community_32",
+      "release_community": "community_6",
+      "source_type": "da_expand_communities",
+      "source_community": "community_25"
+    },
+    {
+      "instance_id": 104,
+      "previous_community": "community_33",
+      "release_community": "community_7",
+      "source_type": "da_expand_communities",
+      "source_community": "community_27"
+    },
+    {
+      "instance_id": 105,
+      "previous_community": "community_33",
+      "release_community": "community_7",
+      "source_type": "da_expand_communities",
+      "source_community": "community_27"
+    },
+    {
+      "instance_id": 106,
+      "previous_community": "community_33",
+      "release_community": "community_7",
+      "source_type": "da_expand_communities",
+      "source_community": "community_27"
+    },
+    {
+      "instance_id": 107,
+      "previous_community": "community_33",
+      "release_community": "community_7",
+      "source_type": "da_expand_communities",
+      "source_community": "community_27"
+    },
+    {
+      "instance_id": 108,
+      "previous_community": "community_34",
+      "release_community": "community_8",
+      "source_type": "da_expand_communities",
+      "source_community": "community_33"
+    },
+    {
+      "instance_id": 109,
+      "previous_community": "community_34",
+      "release_community": "community_8",
+      "source_type": "da_expand_communities",
+      "source_community": "community_33"
+    },
+    {
+      "instance_id": 110,
+      "previous_community": "community_34",
+      "release_community": "community_8",
+      "source_type": "da_expand_communities",
+      "source_community": "community_33"
+    },
+    {
+      "instance_id": 111,
+      "previous_community": "community_34",
+      "release_community": "community_8",
+      "source_type": "da_expand_communities",
+      "source_community": "community_33"
+    },
+    {
+      "instance_id": 112,
+      "previous_community": "community_34",
+      "release_community": "community_8",
+      "source_type": "da_expand_communities",
+      "source_community": "community_33"
+    },
+    {
+      "instance_id": 113,
+      "previous_community": "community_34",
+      "release_community": "community_8",
+      "source_type": "da_expand_communities",
+      "source_community": "community_33"
+    },
+    {
+      "instance_id": 114,
+      "previous_community": "community_34",
+      "release_community": "community_8",
+      "source_type": "da_expand_communities",
+      "source_community": "community_33"
+    },
+    {
+      "instance_id": 115,
+      "previous_community": "community_34",
+      "release_community": "community_8",
+      "source_type": "da_expand_communities",
+      "source_community": "community_33"
+    },
+    {
+      "instance_id": 116,
+      "previous_community": "community_34",
+      "release_community": "community_8",
+      "source_type": "da_expand_communities",
+      "source_community": "community_33"
+    },
+    {
+      "instance_id": 117,
+      "previous_community": "community_34",
+      "release_community": "community_8",
+      "source_type": "da_expand_communities",
+      "source_community": "community_33"
+    },
+    {
+      "instance_id": 118,
+      "previous_community": "community_28",
+      "release_community": "community_2",
+      "source_type": "da_expand_communities",
+      "source_community": "community_4"
+    },
+    {
+      "instance_id": 119,
+      "previous_community": "community_28",
+      "release_community": "community_2",
+      "source_type": "da_expand_communities",
+      "source_community": "community_4"
+    },
+    {
+      "instance_id": 120,
+      "previous_community": "community_28",
+      "release_community": "community_2",
+      "source_type": "da_expand_communities",
+      "source_community": "community_4"
+    },
+    {
+      "instance_id": 121,
+      "previous_community": "community_28",
+      "release_community": "community_2",
+      "source_type": "da_expand_communities",
+      "source_community": "community_4"
+    },
+    {
+      "instance_id": 122,
+      "previous_community": "community_28",
+      "release_community": "community_2",
+      "source_type": "da_expand_communities",
+      "source_community": "community_4"
+    },
+    {
+      "instance_id": 123,
+      "previous_community": "community_28",
+      "release_community": "community_2",
+      "source_type": "da_expand_communities",
+      "source_community": "community_4"
+    },
+    {
+      "instance_id": 124,
+      "previous_community": "community_28",
+      "release_community": "community_2",
+      "source_type": "da_expand_communities",
+      "source_community": "community_4"
+    },
+    {
+      "instance_id": 125,
+      "previous_community": "community_28",
+      "release_community": "community_2",
+      "source_type": "da_expand_communities",
+      "source_community": "community_4"
+    },
+    {
+      "instance_id": 126,
+      "previous_community": "community_28",
+      "release_community": "community_2",
+      "source_type": "da_expand_communities",
+      "source_community": "community_4"
+    },
+    {
+      "instance_id": 127,
+      "previous_community": "community_28",
+      "release_community": "community_2",
+      "source_type": "da_expand_communities",
+      "source_community": "community_4"
+    },
+    {
+      "instance_id": 128,
+      "previous_community": "community_28",
+      "release_community": "community_2",
+      "source_type": "da_expand_communities",
+      "source_community": "community_4"
+    },
+    {
+      "instance_id": 129,
+      "previous_community": "community_28",
+      "release_community": "community_2",
+      "source_type": "da_expand_communities",
+      "source_community": "community_4"
+    },
+    {
+      "instance_id": 130,
+      "previous_community": "community_28",
+      "release_community": "community_2",
+      "source_type": "da_expand_communities",
+      "source_community": "community_4"
+    },
+    {
+      "instance_id": 131,
+      "previous_community": "community_28",
+      "release_community": "community_2",
+      "source_type": "da_expand_communities",
+      "source_community": "community_4"
+    },
+    {
+      "instance_id": 132,
+      "previous_community": "community_28",
+      "release_community": "community_2",
+      "source_type": "da_expand_communities",
+      "source_community": "community_4"
+    },
+    {
+      "instance_id": 133,
+      "previous_community": "community_28",
+      "release_community": "community_2",
+      "source_type": "da_expand_communities",
+      "source_community": "community_4"
+    },
+    {
+      "instance_id": 134,
+      "previous_community": "community_28",
+      "release_community": "community_2",
+      "source_type": "da_expand_communities",
+      "source_community": "community_4"
+    },
+    {
+      "instance_id": 135,
+      "previous_community": "community_28",
+      "release_community": "community_2",
+      "source_type": "da_expand_communities",
+      "source_community": "community_4"
+    },
+    {
+      "instance_id": 136,
+      "previous_community": "community_28",
+      "release_community": "community_2",
+      "source_type": "da_expand_communities",
+      "source_community": "community_4"
+    },
+    {
+      "instance_id": 137,
+      "previous_community": "community_28",
+      "release_community": "community_2",
+      "source_type": "da_expand_communities",
+      "source_community": "community_4"
+    },
+    {
+      "instance_id": 138,
+      "previous_community": "community_28",
+      "release_community": "community_2",
+      "source_type": "da_expand_communities",
+      "source_community": "community_4"
+    },
+    {
+      "instance_id": 139,
+      "previous_community": "community_28",
+      "release_community": "community_2",
+      "source_type": "da_expand_communities",
+      "source_community": "community_4"
+    },
+    {
+      "instance_id": 140,
+      "previous_community": "community_28",
+      "release_community": "community_2",
+      "source_type": "da_expand_communities",
+      "source_community": "community_4"
+    },
+    {
+      "instance_id": 141,
+      "previous_community": "community_28",
+      "release_community": "community_2",
+      "source_type": "da_expand_communities",
+      "source_community": "community_4"
+    },
+    {
+      "instance_id": 142,
+      "previous_community": "community_28",
+      "release_community": "community_2",
+      "source_type": "da_expand_communities",
+      "source_community": "community_4"
+    },
+    {
+      "instance_id": 143,
+      "previous_community": "community_28",
+      "release_community": "community_2",
+      "source_type": "da_expand_communities",
+      "source_community": "community_4"
+    },
+    {
+      "instance_id": 144,
+      "previous_community": "community_28",
+      "release_community": "community_2",
+      "source_type": "da_expand_communities",
+      "source_community": "community_4"
+    },
+    {
+      "instance_id": 145,
+      "previous_community": "community_28",
+      "release_community": "community_2",
+      "source_type": "da_expand_communities",
+      "source_community": "community_4"
+    },
+    {
+      "instance_id": 146,
+      "previous_community": "community_36",
+      "release_community": "community_9",
+      "source_type": "da_expand_communities",
+      "source_community": "community_40"
+    },
+    {
+      "instance_id": 147,
+      "previous_community": "community_36",
+      "release_community": "community_9",
+      "source_type": "da_expand_communities",
+      "source_community": "community_40"
+    },
+    {
+      "instance_id": 148,
+      "previous_community": "community_36",
+      "release_community": "community_9",
+      "source_type": "da_expand_communities",
+      "source_community": "community_40"
+    },
+    {
+      "instance_id": 149,
+      "previous_community": "community_36",
+      "release_community": "community_9",
+      "source_type": "da_expand_communities",
+      "source_community": "community_40"
+    },
+    {
+      "instance_id": 150,
+      "previous_community": "community_36",
+      "release_community": "community_9",
+      "source_type": "da_expand_communities",
+      "source_community": "community_40"
+    },
+    {
+      "instance_id": 151,
+      "previous_community": "community_36",
+      "release_community": "community_9",
+      "source_type": "da_expand_communities",
+      "source_community": "community_40"
+    },
+    {
+      "instance_id": 152,
+      "previous_community": "community_36",
+      "release_community": "community_9",
+      "source_type": "da_expand_communities",
+      "source_community": "community_40"
+    },
+    {
+      "instance_id": 153,
+      "previous_community": "community_36",
+      "release_community": "community_9",
+      "source_type": "da_expand_communities",
+      "source_community": "community_40"
+    },
+    {
+      "instance_id": 154,
+      "previous_community": "community_36",
+      "release_community": "community_9",
+      "source_type": "da_expand_communities",
+      "source_community": "community_40"
+    },
+    {
+      "instance_id": 155,
+      "previous_community": "community_37",
+      "release_community": "community_10",
+      "source_type": "da_expand_communities",
+      "source_community": "community_43"
+    },
+    {
+      "instance_id": 156,
+      "previous_community": "community_38",
+      "release_community": "community_11",
+      "source_type": "da_expand_communities",
+      "source_community": "community_44"
+    },
+    {
+      "instance_id": 157,
+      "previous_community": "community_38",
+      "release_community": "community_11",
+      "source_type": "da_expand_communities",
+      "source_community": "community_44"
+    },
+    {
+      "instance_id": 158,
+      "previous_community": "community_38",
+      "release_community": "community_11",
+      "source_type": "da_expand_communities",
+      "source_community": "community_44"
+    },
+    {
+      "instance_id": 159,
+      "previous_community": "community_38",
+      "release_community": "community_11",
+      "source_type": "da_expand_communities",
+      "source_community": "community_44"
+    },
+    {
+      "instance_id": 160,
+      "previous_community": "community_39",
+      "release_community": "community_12",
+      "source_type": "da_expand_communities",
+      "source_community": "community_49"
+    },
+    {
+      "instance_id": 161,
+      "previous_community": "community_39",
+      "release_community": "community_12",
+      "source_type": "da_expand_communities",
+      "source_community": "community_49"
+    },
+    {
+      "instance_id": 162,
+      "previous_community": "community_39",
+      "release_community": "community_12",
+      "source_type": "da_expand_communities",
+      "source_community": "community_49"
+    },
+    {
+      "instance_id": 163,
+      "previous_community": "community_39",
+      "release_community": "community_12",
+      "source_type": "da_expand_communities",
+      "source_community": "community_49"
+    },
+    {
+      "instance_id": 164,
+      "previous_community": "community_39",
+      "release_community": "community_12",
+      "source_type": "da_expand_communities",
+      "source_community": "community_49"
+    },
+    {
+      "instance_id": 165,
+      "previous_community": "community_39",
+      "release_community": "community_12",
+      "source_type": "da_expand_communities",
+      "source_community": "community_49"
+    },
+    {
+      "instance_id": 166,
+      "previous_community": "community_39",
+      "release_community": "community_12",
+      "source_type": "da_expand_communities",
+      "source_community": "community_49"
+    },
+    {
+      "instance_id": 167,
+      "previous_community": "community_39",
+      "release_community": "community_12",
+      "source_type": "da_expand_communities",
+      "source_community": "community_49"
+    },
+    {
+      "instance_id": 168,
+      "previous_community": "community_39",
+      "release_community": "community_12",
+      "source_type": "da_expand_communities",
+      "source_community": "community_49"
+    },
+    {
+      "instance_id": 169,
+      "previous_community": "community_40",
+      "release_community": "community_13",
+      "source_type": "da_expand_communities",
+      "source_community": "community_50"
+    },
+    {
+      "instance_id": 170,
+      "previous_community": "community_40",
+      "release_community": "community_13",
+      "source_type": "da_expand_communities",
+      "source_community": "community_50"
+    },
+    {
+      "instance_id": 171,
+      "previous_community": "community_40",
+      "release_community": "community_13",
+      "source_type": "da_expand_communities",
+      "source_community": "community_50"
+    },
+    {
+      "instance_id": 172,
+      "previous_community": "community_42",
+      "release_community": "community_14",
+      "source_type": "da_expand_communities",
+      "source_community": "community_60"
+    },
+    {
+      "instance_id": 173,
+      "previous_community": "community_42",
+      "release_community": "community_14",
+      "source_type": "da_expand_communities",
+      "source_community": "community_60"
+    },
+    {
+      "instance_id": 174,
+      "previous_community": "community_42",
+      "release_community": "community_14",
+      "source_type": "da_expand_communities",
+      "source_community": "community_60"
+    },
+    {
+      "instance_id": 175,
+      "previous_community": "community_43",
+      "release_community": "community_16",
+      "source_type": "da_expand_communities",
+      "source_community": "community_65"
+    },
+    {
+      "instance_id": 176,
+      "previous_community": "community_43",
+      "release_community": "community_16",
+      "source_type": "da_expand_communities",
+      "source_community": "community_65"
+    },
+    {
+      "instance_id": 177,
+      "previous_community": "community_43",
+      "release_community": "community_16",
+      "source_type": "da_expand_communities",
+      "source_community": "community_65"
+    },
+    {
+      "instance_id": 178,
+      "previous_community": "community_43",
+      "release_community": "community_16",
+      "source_type": "da_expand_communities",
+      "source_community": "community_65"
+    },
+    {
+      "instance_id": 179,
+      "previous_community": "community_43",
+      "release_community": "community_16",
+      "source_type": "da_expand_communities",
+      "source_community": "community_65"
+    },
+    {
+      "instance_id": 180,
+      "previous_community": "community_43",
+      "release_community": "community_16",
+      "source_type": "da_expand_communities",
+      "source_community": "community_65"
+    },
+    {
+      "instance_id": 182,
+      "previous_community": "community_29",
+      "release_community": "community_3",
+      "source_type": "da_expand_communities",
+      "source_community": "community_8"
+    },
+    {
+      "instance_id": 183,
+      "previous_community": "community_29",
+      "release_community": "community_3",
+      "source_type": "da_expand_communities",
+      "source_community": "community_8"
+    },
+    {
+      "instance_id": 184,
+      "previous_community": "community_29",
+      "release_community": "community_3",
+      "source_type": "da_expand_communities",
+      "source_community": "community_8"
+    },
+    {
+      "instance_id": 185,
+      "previous_community": "community_29",
+      "release_community": "community_3",
+      "source_type": "da_expand_communities",
+      "source_community": "community_8"
+    },
+    {
+      "instance_id": 186,
+      "previous_community": "community_29",
+      "release_community": "community_3",
+      "source_type": "da_expand_communities",
+      "source_community": "community_8"
+    },
+    {
+      "instance_id": 187,
+      "previous_community": "community_29",
+      "release_community": "community_3",
+      "source_type": "da_expand_communities",
+      "source_community": "community_8"
+    },
+    {
+      "instance_id": 188,
+      "previous_community": "community_29",
+      "release_community": "community_3",
+      "source_type": "da_expand_communities",
+      "source_community": "community_8"
+    },
+    {
+      "instance_id": 189,
+      "previous_community": "community_29",
+      "release_community": "community_3",
+      "source_type": "da_expand_communities",
+      "source_community": "community_8"
+    }
+  ]
+}

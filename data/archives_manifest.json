@@ -1,0 +1,399 @@
+{
+  "version": "1.0.1",
+  "num_archives": 49,
+  "total_size_bytes": 66448309987,
+  "archives": [
+    {
+      "community_id": "community_0",
+      "archive_path": "archives/community_0.tar.zst",
+      "extracts_to": "communities/community_0",
+      "size_bytes": 2140331673,
+      "sha256": "ccaa0fab5743bf0f6713a0ef340a7011de2df713d8fea3d632f31bf5d7f74bea",
+      "archive_root": "data/community_0"
+    },
+    {
+      "community_id": "community_1",
+      "archive_path": "archives/community_1.tar.zst",
+      "extracts_to": "communities/community_1",
+      "size_bytes": 1214463244,
+      "sha256": "0598dd4c23b24038a8bfec865797deb03ef529c050d112bb98943a57b02bf13a",
+      "archive_root": "data/community_1"
+    },
+    {
+      "community_id": "community_2",
+      "archive_path": "archives/community_2.tar.zst",
+      "extracts_to": "communities/community_2",
+      "size_bytes": 1850158229,
+      "sha256": "e7f79dcc575e15f57c181f723f1c0025669fe047d86cc5a53efae89cbec1507f",
+      "archive_root": "data/community_2"
+    },
+    {
+      "community_id": "community_3",
+      "archive_path": "archives/community_3.tar.zst",
+      "extracts_to": "communities/community_3",
+      "size_bytes": 1168016078,
+      "sha256": "12bd71a4ad8143c88ac5ea52a49534bda5645edb6624dc931cd5b34215518537",
+      "archive_root": "data/community_3"
+    },
+    {
+      "community_id": "community_4",
+      "archive_path": "archives/community_4.tar.zst",
+      "extracts_to": "communities/community_4",
+      "size_bytes": 823185095,
+      "sha256": "d7cd8c958f282822b0803837a704e491d1653b031014fcb0d3701a384d58417b",
+      "archive_root": "data/community_4"
+    },
+    {
+      "community_id": "community_5",
+      "archive_path": "archives/community_5.tar.zst",
+      "extracts_to": "communities/community_5",
+      "size_bytes": 8860477756,
+      "sha256": "57a753ef4927ce5ba47ca67ee0a1ea6ad2c7d96b4b69486f93d8c7ee72326c8c",
+      "archive_root": "data/community_5"
+    },
+    {
+      "community_id": "community_6",
+      "archive_path": "archives/community_6.tar.zst",
+      "extracts_to": "communities/community_6",
+      "size_bytes": 789238193,
+      "sha256": "ab65a2e8d0545066e37b8f2da07b191fb4a22223fe139944a68671cfe8680699",
+      "archive_root": "data/community_6"
+    },
+    {
+      "community_id": "community_7",
+      "archive_path": "archives/community_7.tar.zst",
+      "extracts_to": "communities/community_7",
+      "size_bytes": 422604509,
+      "sha256": "6dc033bce578a9df30c0ada70b9880586ea75389adfc7dfc6b2c24bf415802b5",
+      "archive_root": "data/community_7"
+    },
+    {
+      "community_id": "community_8",
+      "archive_path": "archives/community_8.tar.zst",
+      "extracts_to": "communities/community_8",
+      "size_bytes": 592127640,
+      "sha256": "2dabb4e6e6c693014b6620941b329ab8ad6695158b83165c0567670960530283",
+      "archive_root": "data/community_8"
+    },
+    {
+      "community_id": "community_9",
+      "archive_path": "archives/community_9.tar.zst",
+      "extracts_to": "communities/community_9",
+      "size_bytes": 273560927,
+      "sha256": "7d9e7be325483e1e05381ee60d822954882602849304090f94822f10ef6e05d8",
+      "archive_root": "data/community_9"
+    },
+    {
+      "community_id": "community_10",
+      "archive_path": "archives/community_10.tar.zst",
+      "extracts_to": "communities/community_10",
+      "size_bytes": 14624961,
+      "sha256": "db0295cadeede1d8eb79855f745ac55f254d8a45b245bd9e5bb0cd80d6775ac6",
+      "archive_root": "data/community_10"
+    },
+    {
+      "community_id": "community_11",
+      "archive_path": "archives/community_11.tar.zst",
+      "extracts_to": "communities/community_11",
+      "size_bytes": 316367879,
+      "sha256": "71686abfea5e09c7c8d8f452a7ee8d621407100306b4cc24f278dfe881de6a18",
+      "archive_root": "data/community_11"
+    },
+    {
+      "community_id": "community_12",
+      "archive_path": "archives/community_12.tar.zst",
+      "extracts_to": "communities/community_12",
+      "size_bytes": 822159405,
+      "sha256": "2e746d123c464bd52c207f1b93b1524bd7cb5cc33d6c5405927d1b6407ead350",
+      "archive_root": "data/community_12"
+    },
+    {
+      "community_id": "community_13",
+      "archive_path": "archives/community_13.tar.zst",
+      "extracts_to": "communities/community_13",
+      "size_bytes": 132266365,
+      "sha256": "38bc2130f14e099cf43bab04dbb445aedf217297da7e6495a22c01c153642587",
+      "archive_root": "data/community_13"
+    },
+    {
+      "community_id": "community_14",
+      "archive_path": "archives/community_14.tar.zst",
+      "extracts_to": "communities/community_14",
+      "size_bytes": 1306629520,
+      "sha256": "24b6c1ab36205018f635f075641f6e30b018c01000bcbaced9cdb44dd511a853",
+      "archive_root": "data/community_14"
+    },
+    {
+      "community_id": "community_16",
+      "archive_path": "archives/community_16.tar.zst",
+      "extracts_to": "communities/community_16",
+      "size_bytes": 12493804,
+      "sha256": "7d343448013f70f93c5c0046e952210f509cc4a89ec4016fc23bbc103edb3ec8",
+      "archive_root": "data/community_16"
+    },
+    {
+      "community_id": "community_17",
+      "archive_path": "archives/community_17.tar.zst",
+      "extracts_to": "communities/community_17",
+      "size_bytes": 4277326272,
+      "sha256": "5f1e13b03c28581c5e0b102a312330c3359dec83babef84d504e9f9290d6718b",
+      "archive_root": "data/community_17"
+    },
+    {
+      "community_id": "community_18",
+      "archive_path": "archives/community_18.tar.zst",
+      "extracts_to": "communities/community_18",
+      "size_bytes": 6674814,
+      "sha256": "abbd060ce26085198300fe088c00fd9ab56c2874b40fbf86634785837bb61d75",
+      "archive_root": "data/community_18"
+    },
+    {
+      "community_id": "community_20",
+      "archive_path": "archives/community_20.tar.zst",
+      "extracts_to": "communities/community_20",
+      "size_bytes": 11180232,
+      "sha256": "578494fe567d0f7a7c6e52814cd90dbaf47b4d79ced15932e620b7fab85d1321",
+      "archive_root": "data/community_20"
+    },
+    {
+      "community_id": "community_21",
+      "archive_path": "archives/community_21.tar.zst",
+      "extracts_to": "communities/community_21",
+      "size_bytes": 14635559,
+      "sha256": "a356433dd1ec02f6f8bcec3a968f57bf89f39d029ce9dd5ccb36890ccec38220",
+      "archive_root": "data/community_21"
+    },
+    {
+      "community_id": "community_23",
+      "archive_path": "archives/community_23.tar.zst",
+      "extracts_to": "communities/community_23",
+      "size_bytes": 94226483,
+      "sha256": "e605ad5b95a86343e6f8fe7741b554f793a1ad84300e884bbf908402217f2bc2",
+      "archive_root": "data/community_23"
+    },
+    {
+      "community_id": "community_25",
+      "archive_path": "archives/community_25.tar.zst",
+      "extracts_to": "communities/community_25",
+      "size_bytes": 271119772,
+      "sha256": "aeb3e0de60e4074b8fb81f8e6b78b1354fe01297cd0279891362b03dfd2ab444",
+      "archive_root": "data/community_25"
+    },
+    {
+      "community_id": "community_26",
+      "archive_path": "archives/community_26.tar.zst",
+      "extracts_to": "communities/community_26",
+      "size_bytes": 2153525686,
+      "sha256": "178e49437be7112e80e0a0494229720a88def17d430bbac91e177ea3658dc4bc",
+      "archive_root": "data/community_26"
+    },
+    {
+      "community_id": "community_27",
+      "archive_path": "archives/community_27.tar.zst",
+      "extracts_to": "communities/community_27",
+      "size_bytes": 1975388492,
+      "sha256": "8787f622ea18a88c386376bd866871740c6e68f92116f5862725ea069b559fbf",
+      "archive_root": "data/community_27"
+    },
+    {
+      "community_id": "community_28",
+      "archive_path": "archives/community_28.tar.zst",
+      "extracts_to": "communities/community_28",
+      "size_bytes": 1872609553,
+      "sha256": "ffdc9f8a8efe5f63898a51b4ba18a03d0ac91be72ef01bc80f93b537d6b3967d",
+      "archive_root": "data/community_28"
+    },
+    {
+      "community_id": "community_29",
+      "archive_path": "archives/community_29.tar.zst",
+      "extracts_to": "communities/community_29",
+      "size_bytes": 1202296599,
+      "sha256": "36693d4efa0b8b62e8e67150bb791937800f49eb53b59461630b6c53bf6e7440",
+      "archive_root": "data/community_29"
+    },
+    {
+      "community_id": "community_30",
+      "archive_path": "archives/community_30.tar.zst",
+      "extracts_to": "communities/community_30",
+      "size_bytes": 882675641,
+      "sha256": "ac973a974f7eec56eb3461c25d641034752f6e196971384aa50aab7fe21dfccd",
+      "archive_root": "data/community_30"
+    },
+    {
+      "community_id": "community_31",
+      "archive_path": "archives/community_31.tar.zst",
+      "extracts_to": "communities/community_31",
+      "size_bytes": 9056083509,
+      "sha256": "031b56aaaf8c24960a79662a07ff0af7f69ec29188ae18a0ee8c0831d7f8bbdb",
+      "archive_root": "data/community_31"
+    },
+    {
+      "community_id": "community_32",
+      "archive_path": "archives/community_32.tar.zst",
+      "extracts_to": "communities/community_32",
+      "size_bytes": 789727398,
+      "sha256": "ea64f85b554f74082824294bbc9ab85b5000bda82c900b1f9cc4706f7027eda8",
+      "archive_root": "data/community_32"
+    },
+    {
+      "community_id": "community_33",
+      "archive_path": "archives/community_33.tar.zst",
+      "extracts_to": "communities/community_33",
+      "size_bytes": 368105038,
+      "sha256": "8cc887f6e8a0c4a3379a07a8d1359fcc9e7de81881c417b2b5db9ee430c8b26d",
+      "archive_root": "data/community_33"
+    },
+    {
+      "community_id": "community_34",
+      "archive_path": "archives/community_34.tar.zst",
+      "extracts_to": "communities/community_34",
+      "size_bytes": 692689992,
+      "sha256": "4d5963e41fd49463f41bb391ccf0bf87af9a2a5509576673cf4ce0f0c05c5da4",
+      "archive_root": "data/community_34"
+    },
+    {
+      "community_id": "community_35",
+      "archive_path": "archives/community_35.tar.zst",
+      "extracts_to": "communities/community_35",
+      "size_bytes": 362728055,
+      "sha256": "0c69eb25d3e50345a6ec10b93d47adfd069d84febc7a44d1c138b3299751a41d",
+      "archive_root": "data/community_35"
+    },
+    {
+      "community_id": "community_36",
+      "archive_path": "archives/community_36.tar.zst",
+      "extracts_to": "communities/community_36",
+      "size_bytes": 1597775284,
+      "sha256": "e888f3d59ef30a2522a88fb9835dd4321f833ec90fafa8c038a4731cf07d0490",
+      "archive_root": "data/community_36"
+    },
+    {
+      "community_id": "community_37",
+      "archive_path": "archives/community_37.tar.zst",
+      "extracts_to": "communities/community_37",
+      "size_bytes": 17728529,
+      "sha256": "ee199ec11635d04717fe08bd3cd435e77b52c3bb747916c07191227a4c5e2dda",
+      "archive_root": "data/community_37"
+    },
+    {
+      "community_id": "community_38",
+      "archive_path": "archives/community_38.tar.zst",
+      "extracts_to": "communities/community_38",
+      "size_bytes": 330745452,
+      "sha256": "9cfb300340a1893fa36b2af09ec35ffe846aa8b591a56c1aa0a7f9a8fe887539",
+      "archive_root": "data/community_38"
+    },
+    {
+      "community_id": "community_39",
+      "archive_path": "archives/community_39.tar.zst",
+      "extracts_to": "communities/community_39",
+      "size_bytes": 832611534,
+      "sha256": "653c6e1972fb4d54b128c9ff84a09990ee74e29e1243846ad01423a7faff88d4",
+      "archive_root": "data/community_39"
+    },
+    {
+      "community_id": "community_40",
+      "archive_path": "archives/community_40.tar.zst",
+      "extracts_to": "communities/community_40",
+      "size_bytes": 312897942,
+      "sha256": "1a11374cc490ad282ce28422447786beb993f10cb89d7748026c4c5b21e81063",
+      "archive_root": "data/community_40"
+    },
+    {
+      "community_id": "community_41",
+      "archive_path": "archives/community_41.tar.zst",
+      "extracts_to": "communities/community_41",
+      "size_bytes": 1226435900,
+      "sha256": "b4c14eab5454b8d747f194770a10b696426fdfbbc2c3b0e91b98ac627c6ba005",
+      "archive_root": "data/community_41"
+    },
+    {
+      "community_id": "community_42",
+      "archive_path": "archives/community_42.tar.zst",
+      "extracts_to": "communities/community_42",
+      "size_bytes": 1306530429,
+      "sha256": "d28ed0faa6d5276ea06ad6c1a4529670de3a2d56cabc6c6660153c297471badb",
+      "archive_root": "data/community_42"
+    },
+    {
+      "community_id": "community_43",
+      "archive_path": "archives/community_43.tar.zst",
+      "extracts_to": "communities/community_43",
+      "size_bytes": 5144617,
+      "sha256": "30771af71c5a37c110b91f5e443e9c2f971ad50e6847bcb8385bee69a2a61aa0",
+      "archive_root": "data/community_43"
+    },
+    {
+      "community_id": "community_44",
+      "archive_path": "archives/community_44.tar.zst",
+      "extracts_to": "communities/community_44",
+      "size_bytes": 103870426,
+      "sha256": "7d8524b2b8fe52a2ba4ca276f3dc00f24a007f482e21ad01a59fa65144745c7b",
+      "archive_root": "data/community_44"
+    },
+    {
+      "community_id": "community_45",
+      "archive_path": "archives/community_45.tar.zst",
+      "extracts_to": "communities/community_45",
+      "size_bytes": 11166232,
+      "sha256": "756b7c3cdd7ca207186d98cc8bbba6e86913f1a360893611c2052ba892768280",
+      "archive_root": "data/community_45"
+    },
+    {
+      "community_id": "community_46",
+      "archive_path": "archives/community_46.tar.zst",
+      "extracts_to": "communities/community_46",
+      "size_bytes": 1282037972,
+      "sha256": "d11d476ed3e3cbd1f64144de148a5f24f1933857cb6aa0c1e99118e49a723a79",
+      "archive_root": "data/community_46"
+    },
+    {
+      "community_id": "community_47",
+      "archive_path": "archives/community_47.tar.zst",
+      "extracts_to": "communities/community_47",
+      "size_bytes": 2588688,
+      "sha256": "de5752d062e893b7f386d2912829ca66c94b232ed8f609110583a125bf75ad17",
+      "archive_root": "data/community_47"
+    },
+    {
+      "community_id": "community_48",
+      "archive_path": "archives/community_48.tar.zst",
+      "extracts_to": "communities/community_48",
+      "size_bytes": 914225987,
+      "sha256": "f88f916d090b4c4656e50bee4f2faaa465b46f562dec3697bf3ffd7bd1534276",
+      "archive_root": "data/community_48"
+    },
+    {
+      "community_id": "community_49",
+      "archive_path": "archives/community_49.tar.zst",
+      "extracts_to": "communities/community_49",
+      "size_bytes": 116883879,
+      "sha256": "2250ffd503ee09a25e22d69ee300dcf619951fb26154f4104b0d1a854410bcab",
+      "archive_root": "data/community_49"
+    },
+    {
+      "community_id": "community_50",
+      "archive_path": "archives/community_50.tar.zst",
+      "extracts_to": "communities/community_50",
+      "size_bytes": 13617862551,
+      "sha256": "2d8a4f3f4d70f088334f546c3dd3cbdd28d011cd6d92aaa933b8fac72fa9f000",
+      "archive_root": "data/community_50"
+    },
+    {
+      "community_id": "community_51",
+      "archive_path": "archives/community_51.tar.zst",
+      "extracts_to": "communities/community_51",
+      "size_bytes": 21751,
+      "sha256": "d0da77126eaa6e48cac987eca59d574cc9212a5ac5bd00d5ca15346cd9db65d2",
+      "archive_root": "data/community_51"
+    },
+    {
+      "community_id": "community_52",
+      "archive_path": "archives/community_52.tar.zst",
+      "extracts_to": "communities/community_52",
+      "size_bytes": 84441,
+      "sha256": "522fb6a3881d68e12787e7570709376923b234f26758d62337c333dfefbf2def",
+      "archive_root": "data/community_52"
+    }
+  ]
+}
